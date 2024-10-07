@@ -11,7 +11,11 @@ React Hooks: Projekt wykorzystuje hooki takie jak useState, useEffect oraz useRe
 useState używany jest do dynamicznej zmiany stanów, jak w przypadku zmiany indeksu w suwakach obrazów lub liczników.
 useEffect używany jest do śledzenia scrolla strony oraz inicjalizacji animacji i efektów, np. paralaksy.
 useRef pomaga w zarządzaniu komponentami oraz ich właściwościami, np. w przypadku referencji do slajdów lub modali.
-Modularność komponentów: Strona składa się z wielu oddzielnych komponentów, takich jak Menu, Slider, Services, Portfolio, Testimonial, które są importowane i używane w głównym komponencie App. To podejście sprzyja czytelności kodu i jego wielokrotnemu użyciu.
+
+
+Modularność komponentów: 
+
+Strona składa się z wielu oddzielnych komponentów, takich jak Menu, Slider, Services, Portfolio, Testimonial, które są importowane i używane w głównym komponencie App. To podejście sprzyja czytelności kodu i jego wielokrotnemu użyciu.
 
 Responsywność i dostępność: Projekt zawiera elementy takie jak mobilne menu, które otwiera się i zamyka w odpowiedzi na interakcje użytkownika. Stylowanie opiera się na CSS, co zapewnia responsywność oraz intuicyjne doświadczenie na urządzeniach mobilnych.
 
@@ -23,7 +27,9 @@ Formularz kontaktowy: Sekcja Contact zawiera walidowany formularz, który śledz
 
 Technologie
 React: Podstawowy framework do budowy interfejsu użytkownika, pozwalający na łatwe tworzenie komponentów.
+
 CSS: Używany do stylizacji strony w celu uzyskania nowoczesnego i atrakcyjnego wyglądu.
+
 Vite: Narzędzie do szybkiego budowania, które przyspiesza proces deweloperski.
 
 Jak uruchomić projekt: 
