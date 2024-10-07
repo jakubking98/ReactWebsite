@@ -1,4 +1,5 @@
-Pol : 
+Polski:
+
 ReactWebsite 
 
 Opis Projektu:
@@ -29,7 +30,8 @@ Jak uruchomić projekt:
 
 Wystarczy kliknąć w ten link : https://jakubking98.github.io/ReactWebsite/
 
-En: 
+English:
+
 React Website: 
 
 Project Description
