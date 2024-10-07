@@ -1,0 +1,58 @@
+.TextArticle {
+  width: 100%; /* Szerokość kontenera artykułu na 100% */
+  background-color: #1b212c; /* Kolor tła kontenera */
+  position: relative; /* Umożliwia pozycjonowanie elementów wewnątrz kontenera */
+  overflow: hidden; /* Ukrywa nadmiarowe zdjęcia */
+}
+
+.TextArticle .TextArticleHeader {
+  margin: 50px 0 0 0; /* Margines dla nagłówka artykułu */
+  display: flex; /* Umożliwia elastyczne rozmieszczenie elementów w nagłówku */
+}
+
+.TextArticle .arrow-left {
+  width: 100px; /* Szerokość strzałki w lewo */
+  height: 60px; /* Wysokość strzałki w lewo */
+  background-color: #688ce8; /* Kolor tła strzałki */
+  font-size: 40px; /* Rozmiar czcionki strzałki */
+  cursor: pointer; /* Kursor zmienia się w rękę po najechaniu */
+  transition: transform 0.3s ease; /* Animacja przy transformacji */
+  text-align: center; /* Wyrównanie tekstu w strzałce */
+}
+
+.TextArticle .arrow-left:hover {
+  transform: translateX(
+    -20px
+  ); /* Przesunięcie strzałki w lewo przy najechaniu */
+}
+
+.TextArticle .tilte {
+  margin-top: 30px; /* Margines górny dla tytułu artykułu */
+  color: #cfd6e3; /* Kolor tytułu artykułu */
+  font-size: 26px; /* Rozmiar czcionki tytułu */
+  font-weight: 600; /* Grubość czcionki tytułu */
+  line-height: 26px; /* Wysokość linii tytułu */
+  letter-spacing: 5px; /* Przestrzeń między literami tytułu */
+  margin-bottom: 30px; /* Margines dolny dla tytułu */
+}
+
+.TextArticle .lowTilte {
+  font-size: 20px; /* Rozmiar czcionki podtytułu */
+  line-height: 33px; /* Wysokość linii podtytułu */
+  max-width: 422px; /* Maksymalna szerokość podtytułu */
+  color: #cfd6e3; /* Kolor podtytułu */
+  margin-bottom: 50px; /* Margines dolny dla podtytułu */
+}
+
+.TextArticle .paragraf {
+  font-size: 16px; /* Rozmiar czcionki paragrafu */
+  font-weight: 400; /* Grubość czcionki paragrafu */
+  line-height: 28.8px; /* Wysokość linii paragrafu */
+  color: #cfd6e3; /* Kolor paragrafu */
+}
+
+.TextArticle img {
+  margin: 20px 0; /* Margines dla obrazków */
+  width: 100%; /* Szerokość obrazków na 100% */
+  height: auto; /* Utrzymanie proporcji obrazków */
+}

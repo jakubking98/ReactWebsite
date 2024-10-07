@@ -1,0 +1,127 @@
+/* Kontener główny slidera */
+.Grab-container {
+  margin-top: 50px; /* Odstęp od góry */
+  width: 100vw; /* Szerokość na 100% widoku */
+}
+
+/* Stylowanie obrazów w sliderze */
+.Grab-container img {
+  width: 1000px; /* Szerokość obrazu */
+  height: auto; /* Automatyczna wysokość */
+  opacity: 0.5; /* Przezroczystość */
+}
+
+/* Efekt hover na obrazach */
+.Grab-container img:hover {
+  opacity: 1; /* Pełna nieprzezroczystość po najechaniu */
+}
+
+/* Stylowanie dużego tekstu */
+.Grab-container .Big {
+  font-size: 140px; /* Rozmiar czcionki */
+  font-weight: 700; /* Grubość czcionki */
+  line-height: 100%; /* Wysokość linii */
+  margin: -80px 20px 0 -45px; /* Marginesy */
+  display: inline-block; /* Wyświetlanie jako blok liniowy */
+  color: #cfd6e3; /* Kolor tekstu */
+  clip-path: inset(0 0 0 45px); /* Przycięcie tekstu */
+}
+
+/* Stylowanie małego tekstu */
+.Grab-container .Small {
+  width: 120px; /* Szerokość elementu */
+  display: inline-block; /* Wyświetlanie jako blok liniowy */
+  font-weight: 600; /* Grubość czcionki */
+  margin-bottom: 0; /* Brak dolnego marginesu */
+  font-size: 16px; /* Rozmiar czcionki */
+  color: #cfd6e3; /* Kolor tekstu */
+}
+
+/* Kontener dla slidera */
+.Grab-container .slider-container {
+  position: relative; /* Pozycjonowanie względne */
+  width: auto; /* Szerokość automatyczna */
+  overflow: hidden; /* Ukrycie nadmiarowej zawartości */
+}
+
+/* Kontener slajdów */
+.Grab-container .slides {
+  width: 1040px; /* Szerokość kontenera slajdów */
+  position: relative; /* Pozycjonowanie względne */
+  height: auto; /* Automatyczna wysokość */
+}
+
+/* Stylowanie pojedynczego slajdu */
+.Grab-container .slides .slide {
+  width: 1000px; /* Szerokość slajdu */
+  height: auto; /* Automatyczna wysokość */
+  margin-right: 40px; /* Margines prawy */
+  background: #1b212c; /* Tło slajdu */
+  cursor: grab; /* Zmiana kursora na "grab" */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Cień wokół slajdu */
+}
+
+/* Stylowanie paska postępu */
+.Grab-container .progressBar {
+  width: 600px; /* Szerokość paska */
+  height: 3px; /* Wysokość paska */
+  background: #303c51; /* Tło paska */
+  position: relative; /* Pozycjonowanie względne */
+  margin-top: 30px; /* Margines od góry */
+  margin-left: -10px; /* Margines lewy */
+}
+
+/* Stylowanie markera na pasku postępu */
+.Grab-container .progressBar .marker {
+  position: absolute; /* Pozycjonowanie absolutne */
+  height: 18px; /* Wysokość markera */
+  width: 100px; /* Szerokość markera */
+  background: #cfd6e3; /* Tło markera */
+  border: 10px solid #1b212c; /* Obramowanie markera */
+  transform: translate(0, -50%); /* Przesunięcie markera */
+  transition: left 0.3s ease; /* Animacja przesunięcia markera */
+}
+
+/* Responsywność dla ekranów poniżej 1020px */
+@media (max-width: 1020px) {
+  .Grab-container {
+    margin-top: 50px; /* Odstęp od góry */
+    width: 100%; /* Szerokość na 100% */
+  }
+  .Grab-container img {
+    width: 600px; /* Zmniejszenie szerokości obrazów */
+    height: auto; /* Automatyczna wysokość */
+    opacity: 0.5; /* Przezroczystość */
+  }
+  .Grab-container .slider-container {
+    width: auto; /* Szerokość automatyczna */
+  }
+  .Grab-container .slides {
+    width: 640px; /* Zmniejszenie szerokości kontenera slajdów */
+  }
+  .Grab-container .slides .slide {
+    width: 600px; /* Zmniejszenie szerokości slajdów */
+  }
+}
+
+/* Responsywność dla ekranów poniżej 770px */
+@media (max-width: 770px) {
+  .Grab-container .slides {
+    width: 480px; /* Dalsze zmniejszenie szerokości kontenera slajdów */
+  }
+  .Grab-container .slides .slide {
+    width: 440px; /* Dalsze zmniejszenie szerokości slajdów */
+  }
+  .Grab-container img {
+    width: 440px; /* Dalsze zmniejszenie szerokości obrazów */
+    height: auto; /* Automatyczna wysokość */
+  }
+  .Grab-container .progressBar {
+    width: 300px; /* Zmniejszenie szerokości paska postępu */
+  }
+
+  .Grab-container .progressBar .marker {
+    height: 18px; /* Wysokość markera */
+    width: 80px; /* Zmniejszenie szerokości markera */
+  }
+}

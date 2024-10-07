@@ -1,0 +1,66 @@
+/* Overlay dla modala */
+.modal-overlay {
+  position: fixed; /* Pozycjonowanie na stałe w stosunku do okna przeglądarki */
+  top: 0; /* Odległość od góry */
+  left: 0; /* Odległość od lewej */
+  width: 100%; /* Szerokość na 100% */
+  height: 100%; /* Wysokość na 100% */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Półprzezroczyste tło, czarne z przezroczystością */
+  display: flex; /* Użycie flexbox do centrowania zawartości */
+  justify-content: center; /* Wyśrodkowanie w poziomie */
+  align-items: center; /* Wyśrodkowanie w pionie */
+  z-index: 101; /* Ustawienie na wierzchu innych elementów */
+}
+
+/* Kontener dla treści modala */
+.modal-content {
+  padding: 50px 0 0 0; /* Padding wewnętrzny: 50px od góry, 0px od innych stron */
+  background-color: transparent; /* Przezroczyste tło */
+  border-radius: 10px; /* Zaokrąglone rogi */
+  position: relative; /* Pozycjonowanie względne dla elementów wewnętrznych */
+  max-width: 800px; /* Maksymalna szerokość kontenera */
+  width: 100%; /* Szerokość na 100% */
+  height: auto; /* Wysokość automatyczna */
+  text-align: center; /* Wyśrodkowanie tekstu */
+}
+
+/* Stylizacja dla elementu wideo w modalu */
+.video-Modal {
+  width: 800px; /* Ustalona szerokość dla filmu */
+  height: 515px; /* Ustalona wysokość dla filmu */
+}
+
+/* Stylizacja dla przycisku zamykającego modal */
+.close-modal-button {
+  position: absolute; /* Pozycjonowanie absolutne w kontenerze modala */
+  top: 0; /* Odległość od góry */
+  right: -10px; /* Odległość od prawej */
+  background-color: white; /* Białe tło przycisku */
+  color: black; /* Czarny kolor tekstu */
+  border: 1px solid black; /* Cienka czarna ramka */
+  cursor: pointer; /* Kursor wskazujący, że można kliknąć */
+  font-size: 20px; /* Rozmiar czcionki */
+  border-radius: 50%; /* Okrągły kształt przycisku */
+  width: 40px; /* Ustalona szerokość przycisku */
+  height: 40px; /* Ustalona wysokość przycisku */
+}
+
+/* Stylizacja dla kontenera filmu */
+.video-wrapper {
+  width: calc(100%); /* Szerokość na 100% */
+}
+
+/* Responsywność dla urządzeń o maksymalnej szerokości 1020px */
+@media (max-width: 1020px) {
+  .modal-content {
+    max-width: none; /* Brak maksymalnej szerokości w trybie responsywnym */
+    width: 80%; /* Szerokość na 80% */
+    margin: 0 10%; /* Marginesy po 10% z lewej i prawej */
+  }
+
+  .video-Modal {
+    width: calc(100%); /* Szerokość filmu na 100% */
+    height: 515px; /* Ustalona wysokość dla filmu */
+  }
+}

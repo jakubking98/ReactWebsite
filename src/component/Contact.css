@@ -1,0 +1,116 @@
+/* Ustawienia lewej i prawej części sekcji kontaktowej */
+.ContactLeft,
+.ContactRight {
+  width: 50%; /* Szerokość na 50% kontenera */
+  display: flex; /* Użycie flexbox do układania elementów */
+  flex-direction: column; /* Ułożenie elementów w kolumnie */
+  justify-content: center; /* Wyrównanie elementów do środka w osi pionowej */
+}
+
+/* Stylizacja prawej części sekcji kontaktowej */
+.ContactRight .box {
+  margin: 0 70px 0 70px; /* Marginesy prawe i lewe */
+  padding: 10px; /* Padding wewnętrzny */
+}
+
+/* Stylizacja lewej części sekcji kontaktowej */
+.ContactLeft .box1 {
+  padding: 10px 10px 10px 0; /* Padding wewnętrzny: góra, prawo, dół, lewo */
+}
+
+/* Stylizacja tekstów w prawej części */
+.ContactRight .text {
+  font-size: 16px; /* Rozmiar czcionki */
+  font-weight: 400; /* Grubość czcionki */
+  line-height: 28.8px; /* Wysokość linii */
+  vertical-align: baseline; /* Wyrównanie pionowe do podstawowej linii tekstu */
+  color: #cfd6e3; /* Kolor tekstu */
+  margin-bottom: 40px; /* Dolny margines */
+}
+
+/* Stylizacja grupy formularza */
+.form-group {
+  margin-bottom: 15px; /* Dolny margines */
+  position: relative; /* Pozycjonowanie względne dla elementów wewnątrz */
+}
+
+/* Stylizacja etykiet pól formularza */
+.form-group label {
+  display: block; /* Wyświetlanie jako blok */
+  position: relative; /* Pozycjonowanie względne */
+  left: 0; /* Położenie od lewej */
+  font-size: 18px; /* Rozmiar czcionki */
+  font-weight: 700; /* Grubość czcionki */
+  transition: all 0.3s; /* Płynna zmiana stylów */
+  color: #cfd6e3; /* Kolor tekstu */
+  top: 0; /* Położenie od góry */
+}
+
+/* Stylizacja etykiet aktywnych pól formularza */
+.form-group label.active {
+  top: -9px; /* Przesunięcie etykiety w górę */
+  font-size: 11px; /* Zmniejszenie rozmiaru czcionki */
+}
+
+/* Stylizacja pól wejściowych i obszarów tekstowych */
+.form-group input,
+.form-group textarea {
+  font-family: "Montserrat", sans-serif; /* Rodzina czcionek */
+  font-size: 14px; /* Rozmiar czcionki */
+  line-height: 25px; /* Wysokość linii */
+  font-weight: 500; /* Grubość czcionki */
+  color: #cfd6e3; /* Kolor tekstu */
+  background-color: transparent; /* Przezroczyste tło */
+  width: 100%; /* Szerokość na 100% kontenera */
+  height: 28px; /* Wysokość pola wejściowego */
+  border: 0; /* Brak obramowania */
+  border-bottom: 2px solid; /* Obramowanie dolne */
+  padding-top: 0; /* Brak paddingu górnego */
+  padding-bottom: 0; /* Brak paddingu dolnego */
+  margin-bottom: 22px; /* Dolny margines */
+  margin-top: 13px; /* Górny margines */
+}
+
+/* Stylizacja obszaru tekstowego wiadomości */
+.form-group textarea:last-child {
+  height: 150px; /* Większa wysokość dla obszaru tekstowego */
+}
+
+/* Stylizacja pól formularza przy fokusie */
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #688ce8; /* Zmiana koloru obramowania przy fokusie */
+}
+
+/* Stylizacja przycisków */
+button {
+  border: 0; /* Brak obramowania */
+  background: transparent; /* Przezroczyste tło */
+  padding: 0; /* Brak paddingu */
+}
+
+/* Stylizacja pól z błędami */
+.form-group .input-error {
+  border-color: #688ce8; /* Kolor obramowania dla błędnych pól */
+}
+
+/* Stylizacja komunikatów o błędach */
+.form-group .error {
+  color: #688ce8; /* Kolor tekstu błędu */
+  font-size: 10px; /* Rozmiar czcionki błędu */
+  position: absolute; /* Pozycjonowanie absolutne */
+  top: 0; /* Położenie od góry */
+  right: 0; /* Położenie od prawej */
+}
+
+/* Responsywność dla ekranów poniżej 1020px */
+@media (max-width: 1020px) {
+  .ContactLeft,
+  .ContactRight {
+    width: 100%; /* Szerokość na 100% kontenera */
+  }
+  .ContactRight .box {
+    margin: 50px 0 0 0; /* Zmniejszenie marginesów dla lepszej responsywności */
+    padding: 0; /* Resetowanie paddingu */
+  }
+}

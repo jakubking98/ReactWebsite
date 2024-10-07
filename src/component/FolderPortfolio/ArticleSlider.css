@@ -1,0 +1,92 @@
+.article-section {
+  width: 950px; /* Szerokość sekcji artykułu */
+  background-color: #1b212c; /* Kolor tła sekcji */
+  position: relative; /* Pozycjonowanie względne dla elementów wewnętrznych */
+  overflow: hidden; /* Ukryj nadmiarowe zdjęcia */
+}
+
+.article-section .article-header {
+  margin-top: 50px; /* Górny margines nagłówka */
+  display: flex; /* Ustawienie flexbox dla nagłówka */
+}
+
+.article-section .arrow-left {
+  width: 100px; /* Szerokość przycisku do ukrywania artykułu */
+  height: 60px; /* Wysokość przycisku */
+  background-color: #688ce8; /* Kolor tła przycisku */
+  font-size: 40px; /* Rozmiar czcionki strzałki */
+  cursor: pointer; /* Kursor wskazujący, że jest to przycisk */
+  transition: transform 0.3s ease; /* Przejrzystość przy animacji */
+  text-align: center; /* Wyśrodkowanie tekstu w przycisku */
+}
+
+.article-section .arrow-left:hover {
+  transform: translateX(
+    -20px
+  ); /* Efekt przesunięcia przycisku przy najechaniu */
+}
+
+.article-section .slider {
+  margin-top: 20px; /* Margines górny dla suwaka */
+  cursor: grab; /* Zmieniamy kursor na 'grab' */
+  height: auto; /* Automatyczna wysokość dla zdjęć */
+  position: relative; /* Pozycjonowanie względne dla elementów wewnętrznych */
+}
+
+.article-section .slider-inner {
+  display: flex; /* Ustawienie zdjęć w poziomie */
+  transition: transform 0.5s ease; /* Dodaj animację do przesuwania */
+}
+
+.article-section .slider img {
+  width: 100%; /* Obraz zajmuje 100% szerokości kontenera */
+  height: auto; /* Automatyczna wysokość dla obrazów */
+  flex: 0 0 100%; /* Każde zdjęcie zajmuje 100% szerokości kontenera */
+}
+
+.article-section .indicator {
+  display: flex; /* Ustawienie kropki w poziomie */
+}
+
+.article-section .dot {
+  height: 10px; /* Wysokość kropki */
+  width: 30px; /* Szerokość kropki */
+  margin: 13px 10px 40px 0; /* Marginesy dla kropki */
+  background-color: #232e41; /* Kolor tła kropki */
+  cursor: pointer; /* Kursor wskazujący, że jest to przycisk */
+  transition: background-color 0.3s ease; /* Przejrzystość przy animacji */
+}
+
+.article-section .dot.active {
+  background-color: #688ce8; /* Kolor tła dla aktywnej kropki */
+}
+
+.article-section .tilte {
+  color: #cfd6e3; /* Kolor tekstu nagłówka */
+  font-size: 26px; /* Rozmiar czcionki nagłówka */
+  font-weight: 600; /* Waga czcionki nagłówka */
+  line-height: 26px; /* Wysokość linii nagłówka */
+  letter-spacing: 5px; /* Odstęp między literami w nagłówku */
+}
+
+.article-section .lowTilte {
+  font-size: 20px; /* Rozmiar czcionki podtytułu */
+  line-height: 33px; /* Wysokość linii podtytułu */
+  max-width: 422px; /* Maksymalna szerokość podtytułu */
+  color: #cfd6e3; /* Kolor tekstu podtytułu */
+  margin-bottom: 30px; /* Dolny margines podtytułu */
+}
+
+.article-section .paragraf {
+  font-size: 16px; /* Rozmiar czcionki dla paragrafu */
+  font-weight: 400; /* Waga czcionki dla paragrafu */
+  line-height: 28.8px; /* Wysokość linii dla paragrafu */
+  color: #cfd6e3; /* Kolor tekstu paragrafu */
+}
+
+@media (max-width: 1020px) {
+  .article-section {
+    width: 100%; /* Szerokość sekcji na mniejszych ekranach */
+    height: auto; /* Automatyczna wysokość sekcji */
+  }
+}

@@ -1,0 +1,205 @@
+.sliderBox {
+  position: relative; /* Umożliwia użycie pozycji absolutnej wewnątrz */
+  width: 100%; /* Szerokość slidera na 100% */
+  height: 730px; /* Wysokość slidera */
+  overflow: hidden; /* Ukrywa nadmiarowe elementy */
+  background-color: #f0f4f8; /* Tło slidera */
+}
+
+.sliderBox .slider-wrapper {
+  display: flex; /* Ustawia elementy wewnętrzne w rzędzie */
+  height: 100%; /* Wysokość wrappera na 100% */
+  will-change: transform; /* Optymalizacja wydajności przy animacjach */
+}
+
+.sliderBox .slide {
+  min-width: 100%; /* Minimalna szerokość slajdu na 100% */
+  height: auto; /* Automatyczna wysokość slajdu */
+  background-size: cover; /* Pokrywa tło całego elementu */
+  background-position: center; /* Ustawia środek jako punkt odniesienia */
+  position: relative; /* Pozycjonowanie względne dla elementów wewnętrznych */
+}
+
+.sliderBox .slide .overlay {
+  position: absolute; /* Absolutna pozycja dla nakładki */
+  top: 0; /* Przylega do górnej krawędzi */
+  left: 0; /* Przylega do lewej krawędzi */
+  width: 100%; /* Szerokość nakładki na 100% */
+  height: 100%; /* Wysokość nakładki na 100% */
+  background: linear-gradient(
+    rgba(26, 49, 89, 0.752),
+    rgba(22, 44, 79, 0.7)
+  ); /* Niebiesko-ciemny gradient jako nakładka */
+  z-index: 1; /* Umieszcza nakładkę powyżej slajdu */
+}
+
+/* Style dla strzałek nawigacyjnych */
+.sliderBox .nav-button {
+  position: absolute; /* Absolutna pozycja dla przycisków */
+  top: 50%; /* Ustawia na środku wysokości */
+  transform: translateY(-50%); /* Wyśrodkowuje przycisk w pionie */
+  background-color: rgba(0, 0, 0, 0.5); /* Półprzezroczyste tło */
+  color: white; /* Kolor tekstu na biały */
+  border: none; /* Usuwa domyślną ramkę */
+  padding: 15px; /* Dodaje wewnętrzny margines */
+  cursor: pointer; /* Zmienia kursor na wskaźnik */
+  z-index: 2; /* Umieszcza przyciski powyżej slajdu */
+  font-size: 40px; /* Rozmiar czcionki */
+}
+
+.sliderBox .nav-button.prev {
+  left: 10px; /* Ustawia przycisk "poprzedni" z lewej strony */
+}
+
+.sliderBox .nav-button.next {
+  right: 10px; /* Ustawia przycisk "następny" z prawej strony */
+}
+
+.ContentBox {
+  display: flex; /* Ustawia elementy wewnętrzne w rzędzie */
+  position: absolute; /* Absolutna pozycja dla treści slidera */
+  justify-content: center; /* Wyśrodkowuje elementy w poziomie */
+  align-items: center; /* Wyśrodkowuje elementy w pionie */
+  width: 100%; /* Szerokość na 100% */
+  height: 730px; /* Wysokość kontenera treści */
+  top: 0; /* Ustawia na górnej krawędzi slidera */
+  z-index: 2; /* Umieszcza kontener treści powyżej slajdów */
+}
+
+.ContainerOnSlider {
+  width: 1140px; /* Szerokość kontenera na 1140px */
+  height: auto; /* Automatyczna wysokość */
+  display: flex; /* Ustawia elementy wewnętrzne w rzędzie */
+  flex-direction: row; /* Ustawia kierunek na poziomy */
+  justify-content: space-between; /* Równo rozmieszcza elementy */
+  align-items: center; /* Wyśrodkowuje elementy w pionie */
+}
+
+.sliderBox .textSlider {
+  width: 50%; /* Szerokość dla tekstu na 50% */
+  z-index: 3; /* Umieszcza tekst powyżej nakładki */
+}
+
+.sliderBox .textSlider span {
+  font-size: 70px; /* Rozmiar czcionki dla tekstu */
+  color: #f0f4f8; /* Kolor tekstu */
+  font-family: "Montserrat", sans-serif; /* Czcionka */
+  font-weight: 700; /* Grubość czcionki */
+  line-height: 73px; /* Wysokość linii */
+}
+
+.SliderElementRight {
+  display: flex; /* Ustawia elementy wewnętrzne w rzędzie */
+  justify-content: center; /* Wyśrodkowuje w poziomie */
+  align-items: center; /* Wyśrodkowuje w pionie */
+  width: 50%; /* Szerokość na 50% */
+  height: 180px; /* Wysokość na 180px */
+  position: relative; /* Pozycjonowanie względne dla elementów wewnętrznych */
+}
+
+.play,
+.playButtton {
+  position: absolute; /* Absolutna pozycja dla przycisków */
+  top: 50%; /* Ustawia na środku wysokości */
+  left: 50%; /* Ustawia na środku szerokości */
+  transform: translate(-50%, -50%); /* Wyśrodkowuje przycisk */
+  margin: auto; /* Automatyczne marginesy */
+}
+
+.play {
+  z-index: 3; /* Umieszcza przycisk powyżej innych elementów */
+}
+
+.playButtton {
+  z-index: 2; /* Umieszcza przycisk poniżej przycisku odtwarzania */
+}
+
+.play img {
+  width: 120px; /* Szerokość obrazu przycisku play */
+  height: 120px; /* Wysokość obrazu przycisku play */
+  cursor: pointer; /* Zmienia kursor na wskaźnik */
+}
+
+.playButtton img {
+  width: 180px; /* Szerokość obrazu przycisku tła */
+  height: 180px; /* Wysokość obrazu przycisku tła */
+}
+
+/* Media queries dla responsywności */
+@media (max-width: 1400px) {
+  .sliderBox .textSlider {
+    width: 40%; /* Ustawia szerokość na 40% dla mniejszych ekranów */
+    margin-left: 10%; /* Dodaje margines z lewej strony */
+  }
+}
+
+@media (max-width: 1020px) {
+  .sliderBox .textSlider {
+    width: 50%; /* Ustawia szerokość na 50% dla mniejszych ekranów */
+    margin-left: 10%; /* Dodaje margines z lewej strony */
+  }
+
+  .SliderElementRight {
+    width: 40%; /* Ustawia szerokość dla elementu po prawej stronie */
+  }
+}
+
+@media (max-width: 770px) {
+  .sliderBox {
+    height: 480px; /* Zmniejsza wysokość slidera */
+  }
+  .ContentBox {
+    height: 75%; /* Ustawia wysokość kontenera treści */
+    top: 25%; /* Ustawia kontener na 25% od góry */
+  }
+
+  .ContainerOnSlider {
+    display: flex; /* Ustawia elementy wewnętrzne w rzędzie */
+    flex-direction: column; /* Ustawia kierunek na pionowy */
+    height: auto; /* Automatyczna wysokość */
+    width: 100%; /* Szerokość na 100% */
+    justify-content: center; /* Wyśrodkowuje w pionie */
+    align-items: start; /* Ustawia elementy na początku */
+  }
+  .sliderBox .textSlider {
+    width: 100%; /* Ustawia szerokość na 100% dla małych ekranów */
+    margin-left: 0%; /* Usuwa margines z lewej strony */
+    z-index: 3; /* Umieszcza tekst powyżej nakładki */
+    height: auto; /* Automatyczna wysokość */
+    padding: 10px; /* Dodaje wewnętrzny margines */
+    margin-top: 0%; /* Usuwa margines górny */
+    display: flex; /* Ustawia elementy wewnętrzne w rzędzie */
+    align-items: end; /* Wyrównuje do dołu */
+  }
+  .sliderBox .textSlider span {
+    font-size: 50px; /* Zmniejsza rozmiar czcionki dla mniejszych ekranów */
+    line-height: 50px; /* Ustawia wysokość linii */
+  }
+  .play img {
+    width: 70px; /* Zmniejsza szerokość obrazu przycisku play */
+    height: 70px; /* Zmniejsza wysokość obrazu przycisku play */
+    cursor: pointer; /* Zmienia kursor na wskaźnik */
+  }
+
+  .playButtton img {
+    width: 100px; /* Zmniejsza szerokość obrazu przycisku tła */
+    height: 100px; /* Zmniejsza wysokość obrazu przycisku tła */
+  }
+  .SliderElementRight {
+    width: 100px; /* Zmniejsza szerokość elementu po prawej stronie */
+    height: 100px; /* Zmniejsza wysokość elementu po prawej stronie */
+    padding: 10px; /* Dodaje wewnętrzny margines */
+    margin-top: 20px; /* Dodaje margines górny */
+  }
+  .play,
+  .playButtton {
+    position: absolute; /* Absolutna pozycja dla przycisków */
+    top: 55px; /* Ustawia na 55px od góry */
+    transform: translate(-50%, -50%); /* Wyśrodkowuje przycisk */
+    margin: 0; /* Usuwa margines */
+  }
+
+  .sliderBox .nav-button {
+    visibility: hidden; /* Ukrywa strzałki nawigacyjne na małych ekranach */
+  }
+}

@@ -1,0 +1,50 @@
+.SkillList:first-child {
+  width: 50%; /* Ustawia szerokość pierwszej listy na 50% */
+  margin-right: 45px; /* Dodaje margines po prawej stronie */
+}
+
+.SkillList:last-child {
+  width: 50%; /* Ustawia szerokość drugiej listy na 50% */
+  margin-left: 45px; /* Dodaje margines po lewej stronie */
+}
+
+.SkillList .SkillElement {
+  display: flex; /* Używa flexbox do ułożenia elementów */
+  flex-direction: row; /* Ustawia kierunek układu na poziomy */
+  width: 100%; /* Ustawia szerokość na 100% */
+  align-items: center; /* Wyrównuje elementy do środka */
+  margin-bottom: 20px; /* Dodaje margines dolny między elementami */
+}
+
+.SkillList .SkillElement .SkillTilte {
+  font-size: 12px; /* Ustawia rozmiar czcionki */
+  line-height: 28px; /* Ustawia wysokość linii */
+  font-weight: 500; /* Ustawia grubość czcionki */
+  letter-spacing: 3.5px; /* Ustawia odstęp między literami */
+  width: 45%; /* Ustawia szerokość tytułu umiejętności */
+  padding-right: 30px; /* Dodaje wewnętrzny margines po prawej stronie */
+  color: #cfd6e3; /* Ustawia kolor czcionki */
+}
+
+.SklillLevel {
+  width: 100%; /* Ustawia szerokość kontenera poziomu umiejętności */
+  height: 10px; /* Ustawia wysokość kontenera */
+  background: #cfd6e3; /* Ustawia kolor tła */
+}
+
+.BlueLevel {
+  height: 10px; /* Ustawia wysokość wskaźnika umiejętności */
+  background: #688ce8; /* Ustawia kolor wskaźnika */
+}
+
+/* Media queries dla responsywności */
+@media (max-width: 770px) {
+  .SkillList:first-child {
+    width: 100%; /* Ustawia szerokość na 100% dla małych ekranów */
+    margin-right: 0; /* Usuwa margines po prawej stronie */
+  }
+  .SkillList:last-child {
+    width: 100%; /* Ustawia szerokość na 100% dla małych ekranów */
+    margin-left: 0; /* Usuwa margines po lewej stronie */
+  }
+}

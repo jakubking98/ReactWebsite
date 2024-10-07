@@ -1,0 +1,87 @@
+/* Stylizacja tytułu sekcji liczników */
+.CounterTitle {
+  font-size: 28px; /* Rozmiar czcionki */
+  font-weight: 600; /* Grubość czcionki */
+  line-height: 1.5em; /* Wysokość linii */
+  color: #cfd6e3; /* Kolor tekstu */
+  width: 705px; /* Szerokość elementu */
+  margin-right: auto; /* Wyrównanie elementu do lewej */
+}
+
+/* Kontener na trzy elementy licznikowe */
+.three-Element {
+  margin-top: 50px; /* Odstęp od góry */
+  width: 100%; /* Szerokość na 100% kontenera */
+  height: auto; /* Automatyczna wysokość */
+  display: flex; /* Użycie flexbox do układania elementów */
+  flex-direction: row; /* Ułożenie w wierszu */
+}
+
+/* Stylizacja poszczególnych elementów licznikowych */
+.three-Element .element1,
+.three-Element .element2,
+.three-Element .element3 {
+  display: flex; /* Użycie flexbox do układania elementów */
+  flex-direction: column; /* Ułożenie elementów w kolumnie */
+  justify-content: center; /* Wyrównanie elementów w pionie */
+  align-items: center; /* Wyrównanie elementów w poziomie */
+  width: 33.33%; /* Szerokość na 1/3 kontenera */
+  height: 150px; /* Stała wysokość elementu */
+  background-color: white; /* Tło elementu */
+}
+
+/* Specyficzne tła dla poszczególnych elementów */
+.three-Element .element1 {
+  background: #688ce8; /* Kolor tła dla element1 */
+}
+
+.three-Element .element2 {
+  background: #577ddd; /* Kolor tła dla element2 */
+}
+
+.three-Element .element3 {
+  background: #5074cd; /* Kolor tła dla element3 */
+}
+
+/* Stylizacja liczb w licznikach */
+.three-Element p {
+  box-sizing: border-box; /* Ustawienie box-sizing */
+  margin: 0; /* Usunięcie marginesów */
+  font-size: 44px; /* Rozmiar czcionki */
+  font-weight: 700; /* Grubość czcionki */
+  line-height: 44px; /* Wysokość linii */
+  color: #cfd6e3; /* Kolor tekstu */
+}
+
+/* Stylizacja opisów liczników */
+.three-Element span {
+  font-size: 16px; /* Rozmiar czcionki */
+  font-weight: 400; /* Grubość czcionki */
+  line-height: 40px; /* Wysokość linii */
+  color: #cfd6e3; /* Kolor tekstu */
+}
+
+/* Responsywność dla ekranów poniżej 770px */
+@media (max-width: 770px) {
+  /* Stylizacja tytułu sekcji liczników na mniejszych ekranach */
+  .CounterTitle {
+    font-size: 20px; /* Zmniejszenie rozmiaru czcionki */
+    font-weight: 600; /* Grubość czcionki */
+    line-height: 30px; /* Wysokość linii */
+    margin-bottom: 50px; /* Odstęp od dołu */
+    width: 100%; /* Szerokość na 100% */
+  }
+
+  /* Stylizacja kontenera na liczby dla mniejszych ekranów */
+  .three-Element {
+    margin-top: 0; /* Usunięcie górnego marginesu */
+    flex-direction: column; /* Zmiana układu na kolumnowy */
+  }
+
+  /* Stylizacja poszczególnych elementów licznikowych na mniejszych ekranach */
+  .three-Element .element1,
+  .three-Element .element2,
+  .three-Element .element3 {
+    width: 100%; /* Szerokość na 100% kontenera */
+  }
+}

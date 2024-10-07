@@ -1,0 +1,201 @@
+/* Styl dla sekcji na ciemnym lub szarym tle */
+.GlobalElementBoxDark,
+.GlobalElementBoxGray {
+  padding: 130px 0 130px 0; /* Odstępy wewnętrzne z góry i dołu */
+  width: 100%; /* Szerokość na 100% */
+  display: flex; /* Flexbox do ułożenia elementów */
+  justify-content: center; /* Wyrównanie elementów na środku */
+  overflow: hidden; /* Ukrycie zawartości, która wykracza poza kontener */
+}
+
+.GlobalElementBoxDark {
+  background: #10141b; /* Ciemne tło */
+}
+
+.GlobalElementBoxGray {
+  background: #1b212c; /* Szare tło */
+}
+
+/* Główny kontener dla sekcji */
+.GlobalContainer {
+  width: 1140px; /* Szerokość kontenera */
+  height: auto; /* Automatyczna wysokość */
+  display: flex;
+  flex-direction: column; /* Ułożenie w kolumnie */
+  justify-content: end; /* Wyrównanie elementów na dole kontenera */
+}
+
+/* Styl nagłówka sektora */
+.GlobalSectorTitle {
+  font-size: 16px;
+  color: #cfd6e3; /* Jasnoszary kolor tekstu */
+  font-weight: 500;
+  letter-spacing: 5px; /* Odstępy między literami */
+  margin-left: 10px;
+}
+
+/* Pozycjonowanie zawartości wewnątrz sekcji */
+.GlobalBoxPosition {
+  width: 950px;
+  margin-left: auto; /* Ustawienie elementu na prawo */
+}
+
+.GlobalBoxPositionFlexRow {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row; /* Ułożenie wiersza */
+}
+
+/* Styl dla numeru sekcji */
+.GlobalTitleNumber {
+  margin-top: 100px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 5px;
+  color: #cfd6e3; /* Jasnoszary kolor tekstu */
+}
+
+/* Podtytuł sekcji */
+.GlobalSubTitle {
+  margin-top: 15px;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.5em; /* Wysokość linii */
+  color: #cfd6e3;
+  width: 705px;
+  margin-right: auto; /* Wyrównanie tekstu do lewej */
+}
+
+/* Styl dla paragrafów */
+.GlobalBoxParagraf {
+  margin-top: 50px;
+  display: flex;
+}
+
+.GlobalBoxParagraf p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28.8px; /* Wysokość linii */
+  vertical-align: baseline;
+  color: #cfd6e3; /* Jasnoszary kolor tekstu */
+}
+
+/* Margines dla pierwszego paragrafu */
+.GlobalBoxParagraf p:first-child {
+  margin-right: 90px;
+}
+
+/* Styl przycisków linków */
+.GlobalButtonLink,
+.GlobalButtonLinkLowMargin {
+  margin-top: 50px;
+  color: #cfd6e3; /* Kolor tekstu */
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none; /* Brak podkreślenia linku */
+}
+
+.GlobalButtonLinkLowMargin {
+  margin-top: 20px;
+}
+
+/* Linia pod linkiem */
+.GlobalButtonLine {
+  border-top: 2px solid #cfd6e3;
+  margin: 0;
+}
+
+/* Efekt hover na linkach */
+.GlobalButtonLink:hover,
+.GlobalButtonLinkLowMargin:hover {
+  animation: 0.5s linear 0s changeColor;
+  color: #5074cd; /* Kolor zmienia się po najechaniu myszką */
+}
+
+.GlobalButtonLink:hover .GlobalButtonLine,
+.GlobalButtonLinkLowMargin:hover .GlobalButtonLine {
+  animation: 0.5s linear 0s slidein;
+  width: 15px; /* Skrócenie linii przy hover */
+}
+
+/* Animacja zmiany koloru */
+@keyframes changeColor {
+  from {
+    color: #cfd6e3;
+  }
+  to {
+    color: #5074cd;
+  }
+}
+
+/* Animacja wchodzenia linii */
+@keyframes slidein {
+  from {
+    width: 100px;
+  }
+  to {
+    width: 15px;
+  }
+}
+
+/* Responsywność dla ekranów poniżej 1200px */
+@media (max-width: 1200px) {
+  .GlobalBoxPosition {
+    margin: 0 auto;
+  }
+  .GlobalSectorTitle {
+    width: 950px;
+    margin-left: 10px;
+  }
+}
+
+/* Responsywność dla ekranów poniżej 1020px */
+@media (max-width: 1020px) {
+  .GlobalBoxPosition {
+    width: calc(100% - 20px);
+    margin: 10px;
+  }
+  .GlobalSectorTitle {
+    width: calc(100% - 20px);
+    margin: 10px;
+  }
+  .GlobalTitleNumber {
+    margin-top: 50px;
+  }
+  .GlobalContainer {
+    width: 100%;
+  }
+}
+
+/* Responsywność dla ekranów poniżej 770px */
+@media (max-width: 770px) {
+  .GlobalSubTitle {
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    width: 100%;
+    margin-right: 0;
+  }
+  .GlobalElementBoxDark,
+  .GlobalElementBoxGray {
+    padding: 50px 0 50px 0; /* Zmniejszenie paddingu na mniejszych ekranach */
+  }
+  .GlobalTitleNumber {
+    margin-top: 30px;
+  }
+  .GlobalBoxParagraf {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+  .GlobalBoxParagraf p:first-child {
+    margin-right: 0;
+  }
+  .GlobalBoxPositionFlexRow {
+    flex-direction: column; /* Zmiana układu na kolumnę na mniejszych ekranach */
+  }
+}

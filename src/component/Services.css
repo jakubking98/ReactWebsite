@@ -1,0 +1,87 @@
+.threeElementbox {
+  display: flex; /* Ustawia elastyczny układ dla elementów */
+  flex-direction: row; /* Rozmieszczenie w wierszu */
+}
+
+.threeElementbox .element1,
+.threeElementbox .element2,
+.threeElementbox .element3 {
+  margin-top: 100px; /* Margines górny dla każdego elementu */
+  width: 33.33%; /* Ustawia szerokość elementów na jedną trzecią */
+  height: auto; /* Automatyczna wysokość */
+  padding: 50px; /* Padding wewnętrzny */
+}
+
+.threeElementbox .element1 {
+  z-index: 4; /* Z-index dla elementu, aby był na wierzchu */
+  background: #688ce8; /* Kolor tła dla elementu DESIGN */
+}
+
+.threeElementbox .element2 {
+  z-index: 3; /* Z-index dla elementu CODE */
+  background: #577ddd; /* Kolor tła dla elementu CODE */
+}
+
+.threeElementbox .element3 {
+  z-index: 2; /* Z-index dla elementu CLOUD */
+  background: #5074cd; /* Kolor tła dla elementu CLOUD */
+}
+
+.threeElementbox .element1 p,
+.threeElementbox .element2 p,
+.threeElementbox .element3 p {
+  padding: 0; /* Brak paddingu */
+  margin: -145px 0 0 -95px; /* Ustawia margines dla numerów usług */
+  font-size: 140px; /* Rozmiar czcionki numerów */
+  font-weight: 700; /* Pogrubienie czcionki */
+  color: #cfd6e3; /* Kolor czcionki numerów */
+  clip-path: inset(0 0 0 45px); /* Użycie clip-path dla efektu wizualnego */
+}
+
+.threeElementbox .element1 h3,
+.threeElementbox .element2 h3,
+.threeElementbox .element3 h3 {
+  color: #fff; /* Kolor tekstu dla nagłówków usług */
+  font-size: 20px; /* Rozmiar czcionki nagłówków */
+  font-weight: 800; /* Pogrubienie czcionki nagłówków */
+  letter-spacing: 2px; /* Rozstawienie liter */
+  margin-bottom: 40px; /* Margines dolny dla nagłówków */
+}
+
+.threeElementbox .element1 div,
+.threeElementbox .element2 div,
+.threeElementbox .element3 div {
+  color: #fff; /* Kolor tekstu dla opisu usług */
+  font-size: 16px; /* Rozmiar czcionki opisu */
+  line-height: 1.8; /* Wysokość linii dla opisu */
+  font-weight: 400; /* Waga czcionki dla opisu */
+  width: 100%; /* Szerokość na 100% */
+  height: auto; /* Automatyczna wysokość */
+}
+
+@media (max-width: 770px) {
+  .threeElementbox {
+    flex-direction: column; /* Zmiana układu na kolumnowy dla mniejszych ekranów */
+  }
+  .threeElementbox .element1,
+  .threeElementbox .element2,
+  .threeElementbox .element3 {
+    margin-top: 50px; /* Mniejszy margines górny dla elementów */
+    width: calc(100% - 40px); /* Szerokość na 100% minus margines */
+    height: auto; /* Automatyczna wysokość */
+    padding: 50px 20px 30px 20px; /* Zmniejszenie paddingu dla mniejszych ekranów */
+  }
+  .threeElementbox .element1 h3,
+  .threeElementbox .element2 h3,
+  .threeElementbox .element3 h3 {
+    margin-bottom: 20px; /* Mniejszy margines dolny dla nagłówków */
+  }
+  .threeElementbox .element1 p,
+  .threeElementbox .element2 p,
+  .threeElementbox .element3 p {
+    padding: 0; /* Brak paddingu */
+    margin: 0; /* Brak marginesu */
+    font-size: 60px; /* Mniejszy rozmiar czcionki dla numerów */
+    clip-path: inset(0 0 0 0); /* Usunięcie clip-path dla mniejszych ekranów */
+  }
+}

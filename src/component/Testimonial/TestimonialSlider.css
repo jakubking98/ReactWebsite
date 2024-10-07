@@ -1,0 +1,119 @@
+.TestimonialSliderContainer {
+  margin-top: 50px; /* Odstęp od góry */
+  width: 100vw; /* Szerokość kontenera na 100% widoku */
+}
+
+.TestimonialSliderContainer .box {
+  width: 700px; /* Szerokość kontenera slajdu */
+  height: 390px; /* Wysokość kontenera slajdu */
+  display: flex; /* Ustawienie elastyczne */
+  flex-direction: row; /* Ustawienie kierunku na wiersz */
+}
+
+.TestimonialSliderContainer .text {
+  width: 320px; /* Szerokość tekstu */
+  max-width: 90%; /* Maksymalna szerokość tekstu */
+  margin-right: 240px; /* Margines po prawej */
+  margin-bottom: 60px; /* Margines na dole */
+  font-family: "Montserrat", sans-serif; /* Czcionka */
+  font-size: 16px; /* Rozmiar czcionki */
+  font-weight: 400; /* Waga czcionki */
+  line-height: 28.8px; /* Wysokość linii */
+  vertical-align: baseline; /* Wyrównanie w pionie */
+  color: #cfd6e3; /* Kolor tekstu */
+}
+
+.TestimonialSliderContainer .box img {
+  width: 60px; /* Szerokość zdjęcia */
+  height: 60px; /* Wysokość zdjęcia */
+  border-radius: 50%; /* Zaokrąglone rogi */
+  margin-bottom: 30px; /* Margines na dole */
+}
+
+.TestimonialSliderContainer .box .SideName {
+  margin-bottom: 5px; /* Margines na dole */
+  font-size: 14px; /* Rozmiar czcionki */
+  font-weight: 700; /* Waga czcionki */
+  line-height: 16.8px; /* Wysokość linii */
+  color: #cfd6e3; /* Kolor tekstu */
+  margin: 0; /* Brak marginesów */
+}
+
+.TestimonialSliderContainer .box .SidePosition {
+  margin-bottom: 5px; /* Margines na dole */
+  font-size: 12px; /* Rozmiar czcionki */
+  font-weight: 400; /* Waga czcionki */
+  line-height: 21.6px; /* Wysokość linii */
+  color: #cfd6e3; /* Kolor tekstu */
+  margin: 0; /* Brak marginesów */
+}
+
+.TestimonialSliderContainer .box .border {
+  margin-left: 35px; /* Margines po lewej */
+  width: 3px; /* Szerokość bordera */
+  height: auto; /* Automatyczna wysokość */
+  background: #303c51; /* Kolor bordera */
+}
+
+/* Style do funkcji */
+.TestimonialSliderContainer .slider-container {
+  width: 100%; /* Szerokość kontenera suwaka */
+  position: relative; /* Pozycja względna */
+  overflow: hidden; /* Ukrycie nadmiaru */
+}
+
+.TestimonialSliderContainer .slides {
+  width: 700px; /* Szerokość slajdów */
+  position: relative; /* Pozycja względna */
+  height: 310px; /* Wysokość slajdów */
+}
+
+.TestimonialSliderContainer .slides .slide {
+  height: 310px; /* Wysokość slajdu */
+  width: 660px; /* Szerokość slajdu */
+  margin-right: 40px; /* Margines po prawej */
+  background: #1b212c; /* Kolor tła slajdu */
+  cursor: grab; /* Kursor chwycenia */
+}
+
+.TestimonialSliderContainer .progressBar {
+  width: 600px; /* Szerokość paska postępu */
+  height: 3px; /* Wysokość paska postępu */
+  background: #303c51; /* Kolor tła paska postępu */
+  position: relative; /* Pozycja względna */
+  margin-top: 50px; /* Margines od góry */
+  margin-left: -10px; /* Margines po lewej */
+}
+
+.TestimonialSliderContainer .progressBar .marker {
+  position: absolute; /* Pozycja absolutna */
+  height: 18px; /* Wysokość wskaźnika */
+  width: 100px; /* Szerokość wskaźnika */
+  background: #cfd6e3; /* Kolor tła wskaźnika */
+  border: 10px solid #1b212c; /* Obramowanie wskaźnika */
+  transform: translate(0, -50%); /* Ustawienie wskaźnika na środku */
+  transition: left 0.3s ease; /* Płynne przejście wskaźnika */
+}
+
+@media (max-width: 770px) {
+  .TestimonialSliderContainer .slider-container {
+    width: 100vw; /* Szerokość kontenera na 100% widoku */
+  }
+  .TestimonialSliderContainer .slides {
+    width: 420px; /* Zmniejszona szerokość slajdów na małych ekranach */
+  }
+
+  .TestimonialSliderContainer .slides .slide {
+    width: 380px; /* Zmniejszona szerokość pojedynczego slajdu */
+  }
+  .TestimonialSliderContainer .box {
+    width: 420px; /* Zmniejszona szerokość kontenera slajdu */
+  }
+  .TestimonialSliderContainer .progressBar {
+    width: 400px; /* Zmniejszona szerokość paska postępu */
+  }
+  .TestimonialSliderContainer .progressBar .marker {
+    height: 18px; /* Wysokość wskaźnika */
+    width: 80px; /* Szerokość wskaźnika */
+  }
+}

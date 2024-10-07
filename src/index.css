@@ -1,0 +1,10 @@
+body {
+  max-width: 100%; /* Ustawia maksymalną szerokość strony */
+  margin: 0 auto; /* Wyśrodkowuje zawartość strony */
+  font-family: "Montserrat", sans-serif; /* Ustawienia podstawowej czcionki */
+  color: white;
+  box-sizing: border-box; /* Zapewnia poprawne liczenie szerokości elementów */
+}
+html {
+  scroll-behavior: smooth;
+}

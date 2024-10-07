@@ -1,0 +1,107 @@
+/* Kontener dla całego slidera, wyświetlany na pełnym ekranie */
+.slider-overlay {
+  position: fixed; /* Pozwala na przypięcie kontenera do okna przeglądarki */
+  top: 0; /* Ustawienie na górze */
+  left: 0; /* Ustawienie z lewej strony */
+  width: 100vw; /* Szerokość na 100% szerokości widoku */
+  height: 100vh; /* Wysokość na 100% wysokości widoku */
+  background-color: rgba(0, 0, 0, 0.7); /* Półprzezroczyste czarne tło */
+  display: flex; /* Umożliwia łatwe rozmieszczanie elementów wewnętrznych */
+  flex-direction: column; /* Ustala kierunek rozmieszczania elementów na kolumny */
+  justify-content: center; /* Wyrównanie elementów do środka w pionie */
+  align-items: center; /* Wyrównanie elementów do środka w poziomie */
+  z-index: 9999; /* Ustawia najwyższy poziom z-index, aby element był nad innymi */
+}
+
+/* Kontener na zdjęcia w sliderze */
+.slider-overlay .slider-container {
+  position: relative; /* Umożliwia pozycjonowanie absolutne elementów wewnętrznych */
+  width: 60vw; /* Ustala szerokość na 60% szerokości widoku */
+  height: auto; /* Wysokość dostosowuje się do zawartości */
+  display: flex; /* Umożliwia łatwe rozmieszczanie elementów wewnętrznych */
+  justify-content: center; /* Wyrównanie zdjęcia do środka w poziomie */
+  align-items: center; /* Wyrównanie zdjęcia do środka w pionie */
+}
+
+/* Styl dla zdjęcia w sliderze */
+.slider-overlay .slider-image {
+  width: 100%; /* Szerokość zdjęcia na 100% szerokości kontenera */
+  height: 100%; /* Wysokość zdjęcia na 100% wysokości kontenera */
+}
+
+/* Styl dla strzałek po lewej i prawej stronie slidera */
+.slider-overlay .arrow {
+  position: absolute; /* Pozycjonowanie absolutne dla swobodnego ustawienia strzałek */
+  font-size: 60px; /* Rozmiar czcionki dla strzałek */
+  cursor: pointer; /* Zmiana kursora na wskaźnik dla strzałek */
+  user-select: none; /* Zapobiega zaznaczaniu tekstu w strzałkach */
+  z-index: 1; /* Ustawienie strzałek nad innymi elementami */
+}
+
+/* Styl dla lewej strzałki */
+.slider-overlay .arrow.left {
+  left: 10px; /* Ustawienie strzałki po lewej stronie z marginesem */
+}
+
+/* Styl dla prawej strzałki */
+.slider-overlay .arrow.right {
+  right: 10px; /* Ustawienie strzałki po prawej stronie z marginesem */
+}
+
+/* Styl dla dolnych kontrolek slidera */
+.slider-overlay .bottom-controls {
+  width: 60vw; /* Szerokość kontrolek na 60% szerokości widoku */
+  height: 50px; /* Ustala wysokość kontrolek */
+  display: flex; /* Umożliwia łatwe rozmieszczanie elementów wewnętrznych */
+  align-items: center; /* Wyrównanie elementów do środka w pionie */
+  justify-content: space-between; /* Rozmieszczanie elementów z odstępami */
+  margin-top: 10px; /* Dodanie marginesu górnego */
+}
+
+/* Styl dla przycisków w dolnych kontrolkach */
+.slider-overlay .bottom-controls button {
+  background-color: transparent; /* Przezroczyste tło dla przycisków */
+  border: none; /* Brak obramowania */
+  color: white; /* Kolor tekstu przycisków */
+  font-size: 30px; /* Rozmiar czcionki dla przycisków */
+  cursor: pointer; /* Zmiana kursora na wskaźnik dla przycisków */
+  width: 50px; /* Ustalenie szerokości przycisków */
+}
+
+/* Styl dla oznaczenia numeru zdjęcia w dolnych kontrolkach */
+.slider-overlay .bottom-controls p {
+  display: inline-block; /* Wyświetlanie w linii */
+  font-size: 20px; /* Rozmiar czcionki dla oznaczenia */
+  margin-left: 20px; /* Dodanie marginesu lewego */
+}
+
+/* Styl dla przycisku zamykania slidera */
+.slider-overlay .close-slider {
+  display: flex; /* Umożliwia łatwe rozmieszczanie elementów wewnętrznych */
+  align-items: center; /* Wyrównanie do środka w pionie */
+  justify-content: end; /* Ustawienie do prawej strony */
+  width: 100px; /* Ustalenie szerokości przycisku */
+  height: 50px; /* Ustalenie wysokości przycisku */
+  font-size: 40px; /* Rozmiar czcionki dla przycisku */
+  margin-right: 10px; /* Dodanie marginesu prawego */
+  cursor: pointer; /* Zmiana kursora na wskaźnik dla przycisku */
+}
+
+/* Media queries dla responsywności */
+@media (max-width: 1020px) {
+  .slider-overlay .slider-container {
+    width: 80vw; /* Zwiększenie szerokości kontenera na 80% przy mniejszych ekranach */
+  }
+  .slider-overlay .bottom-controls {
+    width: 80vw; /* Zwiększenie szerokości kontrolek na 80% przy mniejszych ekranach */
+  }
+}
+
+@media (max-width: 770px) {
+  .slider-overlay .slider-container {
+    width: 90vw; /* Zwiększenie szerokości kontenera na 90% przy jeszcze mniejszych ekranach */
+  }
+  .slider-overlay .bottom-controls {
+    width: 90vw; /* Zwiększenie szerokości kontrolek na 90% przy jeszcze mniejszych ekranach */
+  }
+}

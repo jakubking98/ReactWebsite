@@ -1,0 +1,75 @@
+/* Stylizacja głównego kontenera stopki */
+.Footer {
+  background: #10141b; /* Ciemne tło */
+  padding: 50px 0 70px 0; /* Padding: góra, prawo, dół, lewo */
+  width: 100%; /* Szerokość na 100% */
+  display: flex; /* Użycie flexbox do układania elementów */
+  justify-content: center; /* Wyrównanie poziome na środku */
+  align-items: center; /* Wyrównanie pionowe na środku */
+  flex-direction: column; /* Ułożenie elementów w kolumnie */
+}
+
+/* Stylizacja kontenera na ikony */
+.Footer .iconBox {
+  width: 320px; /* Szerokość kontenera na ikony */
+  display: flex; /* Użycie flexbox do układania ikon w wierszu */
+  justify-content: space-between; /* Rozłożenie ikon równomiernie z przestrzenią między nimi */
+  align-items: center; /* Wyrównanie ikon pionowo na środku */
+  margin-bottom: 20px; /* Dolny margines dla odstępu poniżej ikon */
+}
+
+/* Stylizacja ikon */
+.Footer .iconBox .icon {
+  width: 28px; /* Szerokość ikony */
+  height: 28px; /* Wysokość ikony */
+  margin-left: 4; /* Margines lewy (brak jednostki - powinno być np. 4px) */
+  cursor: pointer; /* Zmiana kursora na wskaźnik ręki po najechaniu */
+  background-position: center; /* Wyśrodkowanie tła */
+  background-size: cover; /* Dopasowanie tła do rozmiaru ikony */
+}
+
+/* Stylizacja czwartej ikony z innym rozmiarem */
+.Footer .iconBox .icon1 {
+  width: 32px; /* Szerokość ikony */
+  height: 32px; /* Wysokość ikony */
+  cursor: pointer; /* Zmiana kursora na wskaźnik ręki po najechaniu */
+  background-position: center; /* Wyśrodkowanie tła */
+  background-size: cover; /* Dopasowanie tła do rozmiaru ikony */
+}
+
+/* Stylizacja tekstu w stopce */
+.Footer .text p {
+  font-size: 16px; /* Rozmiar czcionki */
+  font-weight: 400; /* Grubość czcionki */
+  line-height: 28.8px; /* Wysokość linii */
+  text-align: center; /* Wyrównanie tekstu do środka */
+  vertical-align: baseline; /* Wyrównanie pionowe do podstawowej linii tekstu */
+  color: #cfd6e3; /* Kolor tekstu */
+  margin: 0; /* Brak marginesów */
+}
+
+/* Responsywność dla ekranów poniżej 770px */
+@media (max-width: 770px) {
+  /* Dostosowanie szerokości kontenera ikon na mniejszych ekranach */
+  .Footer .iconBox {
+    width: 200px; /* Zmniejszenie szerokości kontenera na ikony */
+  }
+
+  /* Dostosowanie rozmiarów ikon na mniejszych ekranach */
+  .Footer .iconBox .icon {
+    width: 24px; /* Zmniejszenie szerokości ikony */
+    height: 24px; /* Zmniejszenie wysokości ikony */
+    margin-left: 2px; /* Zmniejszenie marginesu lewego */
+  }
+
+  .Footer .iconBox .icon1 {
+    width: 28px; /* Zmniejszenie szerokości ikony */
+    height: 28px; /* Zmniejszenie wysokości ikony */
+  }
+
+  /* Dostosowanie rozmiaru tekstu w stopce na mniejszych ekranach */
+  .Footer .text p {
+    font-size: 14px; /* Zmniejszenie rozmiaru czcionki */
+    line-height: 24px; /* Zmniejszenie wysokości linii */
+  }
+}

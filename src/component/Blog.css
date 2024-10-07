@@ -1,0 +1,126 @@
+/* Stylizacja pojedynczego artykułu bloga */
+.BlogArticle {
+  width: 50%; /* Szerokość artykułu na 50% kontenera */
+  display: flex; /* Użycie flexbox do układania elementów */
+  flex-direction: column; /* Ułożenie elementów w kolumnie */
+}
+
+/* Dodanie odstępu do ostatniego artykułu */
+.BlogArticle:last-child {
+  padding-left: 30px; /* Lewy padding dla oddzielenia od pierwszego artykułu */
+}
+
+/* Stylowanie daty publikacji artykułu */
+.BlogArticle .datePublic {
+  font-size: 18px; /* Rozmiar czcionki */
+  font-weight: 400; /* Grubość czcionki */
+  line-height: 21.6px; /* Wysokość linii */
+  text-align: left; /* Wyrównanie tekstu do lewej */
+  vertical-align: baseline; /* Wyrównanie pionowe do podstawowej linii tekstu */
+  color: #62728f; /* Kolor tekstu */
+}
+
+/* Stylowanie tytułu artykułu */
+.BlogArticle .tilte {
+  font-size: 28px; /* Rozmiar czcionki */
+  font-weight: 800; /* Grubość czcionki */
+  line-height: 33.6px; /* Wysokość linii */
+  text-align: left; /* Wyrównanie tekstu do lewej */
+  vertical-align: baseline; /* Wyrównanie pionowe do podstawowej linii tekstu */
+  margin: 10px 0 10px 0; /* Marginesy góra, prawo, dół, lewo */
+}
+
+/* Stylowanie linku w tytule artykułu */
+.BlogArticle .tilte a {
+  color: white; /* Kolor tekstu linku */
+  text-decoration: none; /* Brak podkreślenia linku */
+}
+
+/* Efekt hover na linku tytułu artykułu */
+.BlogArticle .tilte a:hover {
+  animation: 0.5s linear 0s changeColorTilte; /* Animacja zmiany koloru */
+  color: #577ddd; /* Nowy kolor po najechaniu */
+}
+
+/* Definicja animacji zmiany koloru tytułu */
+@keyframes changeColorTilte {
+  from {
+    color: white; /* Początkowy kolor */
+  }
+  to {
+    color: #5074cd; /* Końcowy kolor */
+  }
+}
+
+/* Stylowanie obrazka artykułu */
+.BlogArticle .foto,
+.BlogArticle .foto1 {
+  width: 100%; /* Szerokość na 100% kontenera artykułu */
+  height: 350px; /* Stała wysokość obrazka */
+  margin: 20px 0 20px 0; /* Marginesy góra, prawo, dół, lewo */
+  transition: 1s ease; /* Płynne przejście dla zmian stylów */
+  background-position: center; /* Pozycjonowanie tła na środku */
+  cursor: pointer; /* Zmiana kursora na wskaźnik ręki */
+}
+
+/* Efekt hover na pierwszym obrazku */
+.BlogArticle .foto:hover {
+  background-position: right; /* Przesunięcie tła w prawo po najechaniu */
+}
+
+/* Efekt hover na drugim obrazku */
+.BlogArticle .foto1:hover {
+  background-position: top; /* Przesunięcie tła w górę po najechaniu */
+}
+
+/* Stylowanie fragmentu tekstu artykułu */
+.BlogArticle .excerpt {
+  font-size: 16px; /* Rozmiar czcionki */
+  font-weight: 400; /* Grubość czcionki */
+  line-height: 28.8px; /* Wysokość linii */
+  text-align: left; /* Wyrównanie tekstu do lewej */
+  vertical-align: baseline; /* Wyrównanie pionowe do podstawowej linii tekstu */
+  margin-top: 20px; /* Margines od góry */
+  color: #cfd6e3; /* Kolor tekstu */
+}
+
+/* Responsywność dla ekranów poniżej 1020px */
+@media (max-width: 1020px) {
+  /* Zmniejszenie rozmiaru tytułu artykułu */
+  .BlogArticle .tilte {
+    font-size: 22px; /* Mniejszy rozmiar czcionki */
+    line-height: 26.4px; /* Mniejsza wysokość linii */
+  }
+
+  /* Dostosowanie marginesów obrazka */
+  .BlogArticle .foto {
+    margin: auto 0 20px 0; /* Automatyczne wyrównanie marginesów */
+  }
+}
+
+/* Responsywność dla ekranów poniżej 770px */
+@media (max-width: 770px) {
+  /* Ustawienie szerokości artykułu na 100% i zmiana układu na kolumnowy */
+  .BlogArticle {
+    width: 100%; /* Szerokość na 100% */
+    display: flex; /* Flexbox */
+    flex-direction: column; /* Ułożenie w kolumnie */
+  }
+
+  /* Dodanie odstępu do ostatniego artykułu */
+  .BlogArticle:last-child {
+    margin-top: 50px; /* Górny margines */
+    padding-left: 0; /* Resetowanie lewego paddingu */
+  }
+
+  /* Zmniejszenie rozmiaru tytułu artykułu */
+  .BlogArticle .tilte {
+    font-size: 22px; /* Mniejszy rozmiar czcionki */
+    line-height: 26.4px; /* Mniejsza wysokość linii */
+  }
+
+  /* Dostosowanie marginesów obrazka */
+  .BlogArticle .foto {
+    margin: auto 0 20px 0; /* Automatyczne wyrównanie marginesów */
+  }
+}

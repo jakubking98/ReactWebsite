@@ -1,0 +1,124 @@
+/* Stylizacja kontenera przycisków filtrów */
+.ButtonBox {
+  margin: 50px 0 20px auto; /* Góra, prawo, dół, lewo */
+  width: 100%; /* Szerokość na 100% */
+}
+
+/* Stylizacja przycisków filtrów */
+.ButtonBox .button {
+  font-size: 14px; /* Rozmiar czcionki */
+  font-weight: 500; /* Grubość czcionki */
+  display: inline-block; /* Wyświetlanie jako elementy liniowe blokowe */
+  margin: 0 20px 15px 0; /* Marginesy: góra, prawo, dół, lewo */
+  padding: 10px 20px; /* Padding wewnętrzny: góra/dół, prawo/lewo */
+  transition: background-color 0.3s, color 0.3s; /* Animacja zmian tła i koloru */
+  cursor: pointer; /* Kursor wskazujący interaktywność */
+  box-sizing: border-box; /* Uwzględnienie paddingu i borderu w szerokości */
+  text-align: center; /* Wyrównanie tekstu do środka */
+  font-family: "Montserrat", sans-serif; /* Rodzina czcionek */
+  border: 0px; /* Brak obramowania */
+  color: white; /* Kolor tekstu */
+}
+
+/* Efekt hover na przyciskach filtrów */
+.ButtonBox .button:hover {
+  background-color: #688ce8; /* Zmiana koloru tła po najechaniu */
+}
+
+/* Główna galeria z układem obrazów - 2 kolumny */
+.gallery {
+  display: grid; /* Użycie grid layout do układania obrazów */
+  grid-template-columns: repeat(
+    2,
+    1fr
+  ); /* Dwie kolumny o równych szerokościach */
+  grid-template-rows: auto; /* Automatyczna wysokość wierszy */
+  gap: 15px; /* Odstęp między elementami grid */
+  width: 100%; /* Szerokość na 100% */
+  box-sizing: border-box; /* Uwzględnienie paddingu i borderu w szerokości */
+  margin-left: auto; /* Wyrównanie do prawej */
+}
+
+/* Kontener na pojedynczy obraz w galerii */
+.gallery .image-container {
+  position: relative; /* Pozycjonowanie względne dla elementów wewnętrznych */
+  width: 100%; /* Szerokość na 100% kontenera */
+  overflow: hidden; /* Ukrywanie nadmiaru zawartości */
+}
+
+/* Stylizacja obrazów w galerii */
+.gallery img {
+  width: 100%; /* Szerokość na 100% kontenera */
+  height: auto; /* Automatyczna wysokość */
+  object-fit: cover; /* Dopasowanie obrazu, zachowując proporcje */
+  box-sizing: border-box; /* Uwzględnienie paddingu i borderu */
+  cursor: pointer; /* Zmiana kursora na wskaźnik ręki po najechaniu */
+}
+
+/* Specjalne ustawienie dla zdjęcia textFoto (zajmuje dwie kolumny) */
+.gallery .textFoto {
+  grid-column: span 2; /* Rozciągnięcie na dwie kolumny */
+}
+
+/* Specjalne ustawienie dla zdjęcia textFoto1 (zajmuje dwie rzędy) */
+.gallery .textFoto1 {
+  grid-row: span 2; /* Rozciągnięcie na dwa wiersze */
+}
+
+/* Stylizacja div z opisem obrazka */
+.gallery .image-description {
+  position: absolute; /* Pozycjonowanie absolutne względem kontenera obrazka */
+  left: 0;
+  bottom: 0;
+  z-index: 1; /* Ustawienie nad obrazkiem */
+  background-color: #151c28; /* Ciemne tło */
+  padding: 20px 40px; /* Padding: góra/dół, prawo/lewo */
+  color: white; /* Kolor tekstu */
+  transform: translateX(-100%); /* Ukrycie opisania poza ekranem */
+  transition: transform 0.3s ease; /* Animacja przesuwania */
+  box-sizing: border-box; /* Uwzględnienie paddingu i borderu */
+}
+
+/* Po najechaniu na kontener obrazka, pokazujemy div z opisem */
+.gallery .image-container:hover .image-description {
+  transform: translateX(0); /* Przesunięcie opisania na widoczny obszar */
+}
+
+/* Stylizacja górnego tekstu w opisie obrazka */
+.gallery .image-description .textUp {
+  font-size: 28px; /* Rozmiar czcionki */
+  line-height: 100%; /* Wysokość linii */
+  font-weight: 700; /* Grubość czcionki */
+  color: #fff; /* Kolor tekstu */
+  margin: 0; /* Brak marginesów */
+  padding-bottom: 10px; /* Dolny padding */
+}
+
+/* Stylizacja dolnego tekstu w opisie obrazka */
+.gallery .image-description .textDown {
+  font-size: 15px; /* Rozmiar czcionki */
+  color: #fff; /* Kolor tekstu */
+  line-height: 100%; /* Wysokość linii */
+  font-weight: 400; /* Grubość czcionki */
+  margin: 0; /* Brak marginesów */
+}
+
+/* Responsywność dla ekranów poniżej 770px */
+@media (max-width: 770px) {
+  /* Specjalne ustawienie dla zdjęcia textFoto (zajmuje dwie kolumny) */
+  .gallery .textFoto {
+    grid-column: span 2; /* Rozciągnięcie na dwie kolumny */
+  }
+
+  /* Specjalne ustawienie dla zdjęcia textFoto1 (zajmuje dwa wiersze) */
+  .gallery .textFoto1 {
+    grid-row: span 1; /* Zmniejszenie rozciągnięcia do jednego wiersza */
+  }
+
+  /* Zmiana układu galerii na kolumnowy */
+  .gallery {
+    display: flex; /* Użycie flex layout */
+    width: 100%; /* Szerokość na 100% */
+    flex-direction: column; /* Układanie obrazów w kolumnie */
+  }
+}

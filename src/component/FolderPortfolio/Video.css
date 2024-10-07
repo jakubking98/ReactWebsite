@@ -1,0 +1,57 @@
+.video-overlay {
+  position: fixed; /* Pozycjonowanie na stałe względem okna przeglądarki */
+  top: 0; /* Pozycja od góry */
+  left: 0; /* Pozycja od lewej */
+  width: 100%; /* Szerokość na 100% */
+  height: 100%; /* Wysokość na 100% */
+  background-color: rgba(0, 0, 0, 0.9); /* Półprzezroczyste tło */
+  display: flex; /* Użycie flexboxa do centrowania zawartości */
+  justify-content: center; /* Wyśrodkowanie w poziomie */
+  align-items: center; /* Wyśrodkowanie w pionie */
+  z-index: 1000; /* Ustawienie na wierzchu innych elementów */
+}
+
+/* Kontener dla treści modala */
+.video-overlay .video-content {
+  position: relative; /* Umożliwia pozycjonowanie elementów wewnętrznych */
+  max-width: 1200px; /* Maksymalna szerokość kontenera */
+  width: 100%; /* Szerokość kontenera na 100% */
+}
+
+/* Stylizacja dla przycisku zamykającego modal */
+.video-overlay .close-video-button {
+  position: absolute; /* Pozycjonowanie absolutne w odniesieniu do kontenera */
+  bottom: -50px; /* Pozycja od dołu */
+  right: 0px; /* Pozycja od prawej */
+  cursor: pointer; /* Zmiana kursora na wskaźnik */
+  font-size: 30px; /* Rozmiar czcionki przycisku */
+  background: transparent; /* Przezroczyste tło */
+  width: 40px; /* Szerokość przycisku */
+  height: 40px; /* Wysokość przycisku */
+  border: 0px; /* Brak obramowania */
+  color: white; /* Kolor tekstu przycisku */
+}
+
+.video-Wrap {
+  width: 1200px; /* Szerokość iframe na 1200px */
+  height: 650px; /* Wysokość iframe na 650px */
+}
+
+@media (max-width: 1300px) {
+  .video-overlay .video-content {
+    width: 80vw; /* Szerokość kontenera na 80% szerokości widoku */
+    max-width: none; /* Brak maksymalnej szerokości */
+  }
+  .video-overlay .video-Wrap {
+    width: 80vw; /* Szerokość iframe na 80% szerokości widoku */
+  }
+}
+
+@media (max-width: 770px) {
+  .video-overlay .video-content {
+    width: 90vw; /* Szerokość kontenera na 90% szerokości widoku */
+  }
+  .video-overlay .video-Wrap {
+    width: 90vw; /* Szerokość iframe na 90% szerokości widoku */
+  }
+}

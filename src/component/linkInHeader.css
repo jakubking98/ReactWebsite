@@ -1,0 +1,102 @@
+/* Stylizacja głównego kontenera LinkInHeader */
+.linkInHeader {
+  display: flex; /* Użycie flexbox do układania elementów w wierszu */
+  width: 100%; /* Szerokość na 100% rodzica */
+  height: auto; /* Automatyczna wysokość w zależności od zawartości */
+  position: absolute; /* Pozycjonowanie absolutne względem najbliższego elementu pozycjonowanego */
+  justify-content: end; /* Wyrównanie elementów do końca (prawej strony) */
+  top: 650px; /* Odległość od górnej krawędzi rodzica */
+  right: 0; /* Odległość od prawej krawędzi rodzica */
+  flex-direction: row; /* Układanie elementów w poziomie */
+}
+
+/* Stylizacja pierwszego linku w LinkInHeader */
+.linkInHeader .link1,
+.linkInHeader .link2 {
+  display: flex; /* Użycie flexbox do układania zawartości w kolumnie */
+  flex-direction: column; /* Ułożenie elementów w pionie */
+  justify-content: center; /* Wyrównanie pionowe do środka */
+  width: 35%; /* Szerokość na 35% kontenera rodzica */
+  height: 160px; /* Stała wysokość elementu */
+}
+
+/* Specyficzne tło dla pierwszego linku */
+.linkInHeader .link1 {
+  background: #577ddd; /* Kolor tła */
+}
+
+/* Specyficzne tło dla drugiego linku */
+.linkInHeader .link2 {
+  background: #688ce8; /* Kolor tła */
+}
+
+/* Stylizacja linków i tekstów w LinkInHeader */
+.linkInHeader a,
+.linkInHeader span {
+  font-family: "Montserrat", sans-serif; /* Rodzina czcionek */
+  color: white; /* Kolor tekstu */
+  width: 100%; /* Szerokość na 100% kontenera */
+  height: 30px; /* Stała wysokość */
+  text-align: center; /* Wyrównanie tekstu do środka */
+  text-decoration: none; /* Usunięcie podkreślenia linków */
+  font-size: 22px; /* Rozmiar czcionki */
+}
+
+/* Stylizacja tekstu w span */
+.linkInHeader span {
+  font-weight: 800; /* Pogrubienie tekstu */
+}
+
+/* Stylizacja linków */
+.linkInHeader a {
+  font-weight: 500; /* Średnie pogrubienie tekstu */
+  margin-bottom: 5px; /* Dolny margines */
+}
+
+/* Efekt hover na linkach */
+.linkInHeader a:hover {
+  opacity: 0.5; /* Zmniejszenie przezroczystości przy najechaniu */
+}
+
+/* Stylizacja pogrubionej strzałki w linkach */
+.linkInHeader b {
+  margin-left: 5px; /* Odstęp od tekstu linku */
+}
+
+/* Responsywność dla ekranów poniżej 1400px */
+@media (max-width: 1400px) {
+  .linkInHeader .link1,
+  .linkInHeader .link2 {
+    width: 40%; /* Zmiana szerokości na 40% */
+  }
+}
+
+/* Responsywność dla ekranów poniżej 1020px */
+@media (max-width: 1020px) {
+  .linkInHeader .link1,
+  .linkInHeader .link2 {
+    width: 50%; /* Zmiana szerokości na 50% */
+  }
+}
+
+/* Responsywność dla ekranów poniżej 770px */
+@media (max-width: 770px) {
+  .linkInHeader .link1,
+  .linkInHeader .link2 {
+    width: 100%; /* Szerokość na 100% dla lepszej czytelności */
+    height: 120px; /* Zmniejszenie wysokości elementów */
+  }
+
+  .linkInHeader {
+    position: static; /* Resetowanie pozycji absolutnej */
+    justify-content: end; /* Wyrównanie do końca */
+    top: none; /* Usunięcie odległości od góry */
+    right: none; /* Usunięcie odległości od prawej */
+    flex-direction: column; /* Zmiana układu na kolumnowy */
+  }
+
+  .linkInHeader a,
+  .linkInHeader span {
+    font-size: 18px; /* Zmniejszenie rozmiaru czcionki dla lepszej czytelności na mniejszych ekranach */
+  }
+}

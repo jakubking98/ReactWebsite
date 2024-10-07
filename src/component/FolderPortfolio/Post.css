@@ -1,0 +1,102 @@
+.PostSector {
+  width: 100%; /* Ustawia szerokość sekcji na 100% */
+  background-color: #1b212c; /* Kolor tła sekcji */
+  position: relative; /* Umożliwia pozycjonowanie elementów wewnętrznych */
+  overflow: hidden; /* Ukrywa nadmiarowe zdjęcia */
+}
+
+.PostSector .ConainerRow {
+  position: relative; /* Umożliwia pozycjonowanie elementów wewnętrznych */
+  display: flex; /* Umożliwia elastyczne rozmieszczenie elementów w rzędzie */
+  flex-direction: row; /* Ustawia kierunek rozmieszczenia elementów w rzędzie */
+  width: 100%; /* Ustawia szerokość kontenera na 100% */
+}
+
+.PostSector .PostSectorArrow {
+  margin: 50px 0; /* Ustawia margines górny i dolny dla strzałki */
+  display: flex; /* Umożliwia elastyczne rozmieszczenie elementów wewnętrznych */
+  width: 100%; /* Ustawia szerokość kontenera strzałki na 100% */
+}
+
+.PostSector .PostSectorBox {
+  display: flex; /* Umożliwia elastyczne rozmieszczenie elementów w kontenerze */
+  justify-content: center; /* Wyśrodkowuje elementy w kontenerze */
+  flex-direction: column; /* Ustawia kierunek rozmieszczenia elementów w kolumnie */
+  width: 50%; /* Ustawia szerokość kontenera na 50% */
+  margin-right: 50px; /* Ustawia margines po prawej stronie */
+}
+
+.PostSector .PostSectorImg {
+  display: flex; /* Umożliwia elastyczne rozmieszczenie elementów w kontenerze */
+  flex-direction: column; /* Ustawia kierunek rozmieszczenia elementów w kolumnie */
+  width: 50%; /* Ustawia szerokość kontenera na 50% */
+}
+
+.PostSector .arrow-left {
+  width: 100px; /* Ustawia szerokość przycisku do ukrywania artykułu */
+  height: 60px; /* Ustawia wysokość przycisku */
+  background-color: #688ce8; /* Kolor tła przycisku */
+  font-size: 40px; /* Rozmiar czcionki dla strzałki */
+  cursor: pointer; /* Zmiana kursora na wskaźnik dla przycisku */
+  transition: transform 0.3s ease; /* Umożliwia animację przy zmianie transformacji */
+  text-align: center; /* Wyśrodkowanie tekstu w przycisku */
+}
+
+.PostSector .arrow-left:hover {
+  transform: translateX(
+    -20px
+  ); /* Efekt przesunięcia przycisku przy najechaniu */
+}
+
+.PostSector .tilte {
+  color: #cfd6e3; /* Kolor tekstu nagłówka */
+  font-size: 26px; /* Rozmiar czcionki nagłówka */
+  font-weight: 600; /* Waga czcionki nagłówka */
+  line-height: 26px; /* Wysokość linii nagłówka */
+  letter-spacing: 5px; /* Odstęp między literami w nagłówku */
+  margin-bottom: 20px; /* Dolny margines nagłówka */
+}
+
+.PostSector .lowTilte {
+  font-size: 20px; /* Rozmiar czcionki podtytułu */
+  line-height: 33px; /* Wysokość linii podtytułu */
+  max-width: 422px; /* Maksymalna szerokość podtytułu */
+  color: #cfd6e3; /* Kolor tekstu podtytułu */
+  margin-bottom: 20px; /* Dolny margines podtytułu */
+}
+
+.PostSector .paragraf {
+  font-size: 16px; /* Rozmiar czcionki dla paragrafu */
+  color: #cfd6e3; /* Kolor tekstu paragrafu */
+  font-weight: 400; /* Waga czcionki dla paragrafu */
+  line-height: 28px; /* Wysokość linii dla paragrafu */
+  margin: 20px 0; /* Margines górny i dolny dla paragrafu */
+}
+
+.PostSector img {
+  margin: 20px 0; /* Margines górny i dolny dla obrazów */
+}
+
+@media (max-width: 1020px) {
+  .PostSector .ConainerRow {
+    flex-direction: column; /* Zmienia kierunek rozmieszczenia elementów na kolumnowy w mniejszych ekranach */
+  }
+  .PostSector .PostSectorBox {
+    justify-content: start; /* Ustawia wyjustowanie elementów w kontenerze na 'start' */
+    flex-direction: column; /* Ustawia kierunek rozmieszczenia elementów w kolumnie */
+    width: 100%; /* Ustawia szerokość kontenera na 100% */
+    margin-right: 0; /* Usuwa margines po prawej stronie */
+  }
+  .PostSector img {
+    margin: 50px 0 20px 0; /* Ustawia większy margines górny dla obrazów */
+  }
+  .PostSector .PostSectorImg {
+    width: 100%; /* Ustawia szerokość kontenera z obrazem na 100% */
+  }
+  .PostSector .lowTilte {
+    font-size: 18px; /* Zmniejsza rozmiar czcionki podtytułu w mniejszych ekranach */
+    line-height: 30px; /* Ustawia wysokość linii podtytułu */
+    font-weight: 400; /* Ustawia wagę czcionki podtytułu */
+    margin-bottom: 0; /* Usuwa dolny margines podtytułu */
+  }
+}

@@ -1,0 +1,148 @@
+.TimelineGrid {
+  display: grid; /* Ustawia siatkę dla elementów */
+  grid-template-columns: 1fr 0.1fr 1fr; /* Trzy kolumny: element | przerwa | element */
+  margin-top: 40px; /* Górny margines siatki */
+}
+
+.TimelineElement {
+  padding: 0 40px 0 0; /* Padding dla elementu po lewej */
+}
+
+.TimelineElementReverse {
+  padding: 0 0 0 40px; /* Padding dla elementu po prawej */
+}
+
+.TimelineElement .item,
+.TimelineElementReverse .item {
+  padding: 40px; /* Padding wewnętrzny dla elementów */
+  position: relative; /* Pozycjonowanie elementów */
+  background-color: #303c51; /* Tło elementów */
+}
+
+.TimelineElement .Radius,
+.TimelineElementReverse .Radius {
+  content: ""; /* Pusty element dla stylizacji */
+  position: absolute; /* Pozycjonowanie absolutne */
+  width: 40px; /* Szerokość elementu */
+  height: 40px; /* Wysokość elementu */
+  border-radius: 90%; /* Zaokrąglone rogi */
+  right: -20px; /* Położenie po prawej */
+  top: calc(50% - 20px); /* Położenie w pionie na środku */
+  background-color: #10141b; /* Tło dla zaokrąglonego elementu */
+  z-index: 1; /* Ustawienie z-index */
+}
+
+.TimelineElementReverse .Radius {
+  right: none; /* Zmieniamy położenie dla elementu odwrotnego */
+  left: -20px; /* Położenie po lewej */
+}
+
+.TimelineElement .Line,
+.TimelineElementReverse .Line {
+  content: ""; /* Pusty element dla stylizacji */
+  position: absolute; /* Pozycjonowanie absolutne */
+  width: 45px; /* Szerokość linii */
+  height: 3px; /* Wysokość linii */
+  background-color: #303c51; /* Tło dla linii */
+  right: -60px; /* Położenie po prawej */
+  top: calc(50% - 1px); /* Położenie w pionie na środku */
+  z-index: 2; /* Ustawienie z-index */
+}
+
+.TimelineElementReverse .Line {
+  right: none; /* Zmieniamy położenie dla elementu odwrotnego */
+  left: -60px; /* Położenie po lewej */
+}
+
+.TimelineElement .Mark,
+.TimelineElementReverse .Mark {
+  content: ""; /* Pusty element dla stylizacji */
+  position: absolute; /* Pozycjonowanie absolutne */
+  width: 20px; /* Szerokość znacznika */
+  height: 20px; /* Wysokość znacznika */
+  border-radius: 90%; /* Zaokrąglone rogi */
+  right: -15px; /* Położenie po prawej */
+  top: calc(50% - 1px); /* Położenie w pionie na środku */
+  transform: translateY(-12px); /* Przesunięcie w pionie */
+  transition: background-color 0.3s; /* Płynna zmiana koloru tła */
+  border: 3px solid #303c51; /* Obramowanie znacznika */
+  box-sizing: content-box; /* Ustawienie box-sizing */
+  z-index: 2; /* Ustawienie z-index */
+}
+
+.TimelineElementReverse .Mark {
+  right: none; /* Zmieniamy położenie dla elementu odwrotnego */
+  left: -15px; /* Położenie po lewej */
+}
+
+.TimelineElement .item:hover .Mark,
+.TimelineElementReverse .item:hover .Mark {
+  background: #303c51; /* Zmiana tła po najechaniu */
+}
+
+.TimelineElement .date,
+.TimelineElementReverse .date {
+  font-size: 15px; /* Rozmiar czcionki dla daty */
+  font-weight: 400; /* Grubość czcionki */
+  letter-spacing: 4px; /* Odstęp między literami */
+  line-height: 27px; /* Wysokość linii */
+  text-align: left; /* Wyrównanie tekstu do lewej */
+  color: #cfd6e3; /* Kolor tekstu */
+  margin: 0 0 10px 0; /* Marginesy */
+}
+
+.TimelineElement .paragraf,
+.TimelineElementReverse .paragraf {
+  text-align: left; /* Wyrównanie tekstu do lewej */
+  color: #cfd6e3; /* Kolor tekstu */
+  font-size: 16px; /* Rozmiar czcionki */
+  font-weight: 400; /* Grubość czcionki */
+  line-height: 28.8px; /* Wysokość linii */
+  margin: 0; /* Marginesy */
+}
+
+.space {
+  height: 100%; /* Wysokość pustego obszaru */
+  width: 3px; /* Szerokość pustego obszaru */
+  margin: 0 auto; /* Wyrównanie do środka */
+  background: #303c51; /* Tło pustego obszaru */
+}
+
+.spaceHiden {
+  display: none; /* Ukrycie pustego obszaru */
+}
+
+@media (max-width: 1000px) {
+  .TimelineGrid {
+    grid-template-columns: 1fr 0.1fr; /* Zmiana układu dla mniejszych ekranów */
+  }
+  .nextHiden {
+    display: none; /* Ukrycie elementu dla mniejszych ekranów */
+  }
+  .space {
+    display: none; /* Ukrycie pustego obszaru dla mniejszych ekranów */
+  }
+  .spaceHiden {
+    display: block; /* Pokazanie pustego obszaru */
+    height: 100%; /* Wysokość pustego obszaru */
+    width: 3px; /* Szerokość pustego obszaru */
+    margin: 0 auto; /* Wyrównanie do środka */
+    background: #303c51; /* Tło pustego obszaru */
+  }
+  .TimelineElementReverse .Radius {
+    right: -20px; /* Ustawienie położenia dla elementu odwrotnego */
+    left: unset; /* Usunięcie ustawienia położenia po lewej */
+  }
+  .TimelineElementReverse .Line {
+    right: -60px; /* Ustawienie położenia dla elementu odwrotnego */
+    left: unset; /* Usunięcie ustawienia położenia po lewej */
+  }
+  .TimelineElementReverse .Mark {
+    right: -15px; /* Ustawienie położenia dla elementu odwrotnego */
+    left: unset; /* Usunięcie ustawienia położenia po lewej */
+  }
+  .TimelineElementReverse {
+    padding: 0 40px 0 0; /* Padding dla elementu odwrotnego */
+    margin: 20px 0 20px 0; /* Marginesy */
+  }
+}

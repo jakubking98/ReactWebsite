@@ -1,0 +1,103 @@
+.PriceList {
+  display: flex; /* Użycie flexboxa do rozmieszczenia elementów */
+  flex-direction: row; /* Rozmieszczenie w wierszu */
+}
+
+.PriceList .elementBox {
+  display: flex; /* Użycie flexboxa dla elementu */
+  flex-direction: column; /* Rozmieszczenie w kolumnie */
+  justify-content: center; /* Wyśrodkowanie w pionie */
+  align-items: center; /* Wyśrodkowanie w poziomie */
+  width: 33.33%; /* Szerokość na 1/3 kontenera */
+}
+
+.PriceList .elementBox .NamePlan {
+  font-size: 24px; /* Rozmiar czcionki dla nazwy planu */
+  font-weight: 800; /* Grubość czcionki */
+  letter-spacing: 5px; /* Odstęp między literami */
+  margin: 0; /* Margines zerowy */
+  padding-top: 50px; /* Padding górny */
+}
+
+.PriceList .elementBox .NamePlanBottom {
+  font-size: 16px; /* Rozmiar czcionki dla opisu planu */
+  font-weight: 400; /* Grubość czcionki */
+  line-height: 16px; /* Wysokość linii */
+  text-align: center; /* Wyśrodkowanie tekstu */
+  vertical-align: baseline; /* Wyrównanie do podstawy */
+}
+
+.PriceList .elementBox .pricing-holder {
+  margin-top: 20px; /* Odstęp górny */
+  background: #577ddd; /* Tło dla sekcji cenowej */
+  width: 100%; /* Szerokość 100% */
+}
+
+.PriceList .elementBox .pricing-holder-full {
+  margin-top: 20px; /* Odstęp górny */
+  background: #577ddd; /* Tło dla sekcji cenowej */
+  width: 100%; /* Szerokość 100% */
+  box-shadow: 0px 0px 100px 0px #09132b; /* Cień dla elementu pełnego */
+  z-index: 1; /* Poziom z-index */
+}
+
+.PriceList .elementBox .pricing-header {
+  text-align: center; /* Wyśrodkowanie nagłówka */
+  padding: 50px 0 50px 0; /* Padding dla nagłówka */
+}
+
+.PriceList .elementBox .pricing-header .pricing-currency {
+  vertical-align: top; /* Wyrównanie do góry */
+  font-size: 20px; /* Rozmiar czcionki */
+  font-weight: 400; /* Grubość czcionki */
+  line-height: 20px; /* Wysokość linii */
+  margin-right: 10px; /* Prawy margines */
+}
+
+.PriceList .elementBox .pricing-header .pricing-price {
+  font-size: 60px; /* Rozmiar czcionki dla ceny */
+  line-height: 44px; /* Wysokość linii */
+  font-weight: 700; /* Grubość czcionki */
+  margin-right: 10px; /* Prawy margines */
+}
+
+.PriceList .elementBox .pricing-header .pricing-price-suffix {
+  font-size: 20px; /* Rozmiar czcionki dla sufiksu ceny */
+  font-weight: 400; /* Grubość czcionki */
+  line-height: 20px; /* Wysokość linii */
+}
+
+.pricing-content ul {
+  list-style: none; /* Usunięcie stylu listy */
+  padding: 0; /* Zerowanie paddingu */
+  margin: 0 auto 45px; /* Zerowanie marginesu */
+}
+
+.pricing-content li {
+  width: 210px; /* Szerokość elementu listy */
+  margin: 0 auto; /* Wyśrodkowanie */
+  font-size: 16px; /* Rozmiar czcionki */
+  font-weight: 400; /* Grubość czcionki */
+  line-height: 28px; /* Wysokość linii */
+  text-align: left; /* Wyrównanie tekstu do lewej */
+  margin-bottom: 10px; /* Dolny margines */
+  font-family: "Montserrat", sans-serif; /* Czcionka */
+}
+
+.pricing-content li span {
+  display: inline-block; /* Blok w linii dla elementu */
+  width: 16px; /* Szerokość */
+  height: 16px; /* Wysokość */
+  margin-right: 20px; /* Prawy margines */
+  font-size: 16px; /* Rozmiar czcionki */
+}
+
+@media (max-width: 770px) {
+  /* Media query dla responsywności */
+  .PriceList {
+    flex-direction: column; /* Zmiana kierunku na kolumnowy */
+  }
+  .PriceList .elementBox {
+    width: 100%; /* Ustawienie szerokości na 100% */
+  }
+}

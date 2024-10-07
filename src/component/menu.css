@@ -1,0 +1,232 @@
+/* Główny kontener menu */
+.menu-container {
+  position: fixed; /* Menu jest zawsze widoczne na górze strony */
+  top: 0;
+  left: 0;
+  width: 100%; /* Szerokość na 100% ekranu */
+  height: 77px; /* Stała wysokość paska menu */
+  background-color: transparent; /* Przezroczyste tło początkowo */
+  box-shadow: none; /* Brak cienia początkowo */
+  z-index: 100; /* Wysoki z-index, aby menu było nad innymi elementami */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Animacja zmiany tła i cienia */
+}
+
+/* Wewnętrzny kontener menu ograniczający szerokość */
+.menu-inner {
+  position: relative;
+  max-width: 1450px; /* Maksymalna szerokość kontenera */
+  width: 98%; /* Szerokość na 98% rodzica */
+  margin: 0 auto; /* Wyśrodkowanie kontenera */
+  height: 100%;
+  display: flex; /* Użycie flexbox do rozmieszczenia elementów */
+  align-items: center; /* Wyrównanie elementów w pionie */
+  justify-content: space-between; /* Rozmieszczenie elementów na końcach */
+  box-sizing: border-box; /* Uwzględnienie paddingu i borderu w szerokości */
+}
+
+/* Logo w menu */
+.logo {
+  width: 100px; /* Szerokość logo */
+  height: 104px; /* Wysokość logo */
+  position: absolute; /* Pozycjonowanie absolutne w kontenerze menu-inner */
+  top: 0;
+  left: 0;
+  z-index: 1; /* Zapewnienie, że logo jest nad innymi elementami */
+}
+
+/* Lista menu */
+.menu {
+  list-style-type: none; /* Usunięcie punktów listy */
+  display: flex; /* Użycie flexbox do rozmieszczenia elementów w wierszu */
+  padding: 0;
+  margin: 0;
+  height: 73px; /* Wysokość listy */
+  align-items: center; /* Wyrównanie elementów w pionie */
+  transition: transform 0.3s ease; /* Animacja przesuwania menu */
+}
+
+/* Pojedynczy element menu */
+.menu-item {
+  margin-left: 10px; /* Odstęp między elementami menu */
+}
+
+/* Linki w menu */
+.menu-link {
+  color: white; /* Kolor tekstu */
+  font-family: "Montserrat", sans-serif; /* Rodzina czcionek */
+  text-decoration: none; /* Usunięcie podkreślenia linków */
+  padding: 15px; /* Padding wewnętrzny linków */
+  font-size: 15px; /* Rozmiar czcionki */
+  letter-spacing: 0.5px; /* Odstęp między literami */
+  font-weight: 500; /* Grubość czcionki */
+}
+
+/* Efekt hover na linkach */
+.menu-link:hover {
+  color: #007bff; /* Zmiana koloru tekstu po najechaniu */
+}
+
+/* Stylizacja po przewinięciu strony */
+.menu-container.scrolled {
+  background-color: #151c28; /* Ciemniejsze tło po przewinięciu */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Dodanie cienia */
+}
+
+/* Stylizacja przycisku do otwierania menu mobilnego */
+.menu-toggle {
+  display: none; /* Ukrycie przycisku na większych ekranach */
+  flex-direction: column; /* Układ pionowy dla belki */
+  justify-content: space-between; /* Rozmieszczenie belki z odstępami */
+  width: 30px; /* Szerokość przycisku */
+  height: 21px; /* Wysokość przycisku */
+  cursor: pointer; /* Kursor wskazujący interaktywność */
+  background: none; /* Brak tła */
+  border: none; /* Brak obramowania */
+  margin-right: 10px; /* Margines prawy */
+  z-index: 101; /* Wyższy z-index niż menu-container */
+  position: relative; /* Pozycjonowanie względne */
+}
+
+/* Stylizacja belki przycisku menu */
+.menu-toggle-bar {
+  width: 22px; /* Szerokość belki */
+  height: 3px; /* Wysokość belki */
+  background-color: white; /* Kolor belki */
+}
+
+/* Stylizacja środkowej belki przycisku menu w stanie zamkniętym */
+.menu-toggle-bar-middle {
+  position: relative;
+  left: 10px; /* Przesunięcie w lewo */
+  width: 22px;
+  height: 3px;
+  background-color: white;
+  transition: left 0.3s ease; /* Animacja przesunięcia */
+}
+
+/* Stylizacja środkowej belki przycisku menu w stanie otwartym */
+.menu-toggle-bar-middleOpen {
+  position: relative;
+  right: 10px; /* Przesunięcie w prawo */
+  width: 22px;
+  height: 3px;
+  background-color: white;
+  transition: right 0.3s ease; /* Animacja przesunięcia */
+}
+
+/* Efekt hover na środkowej belce przycisku menu */
+.menu-toggle:hover .menu-toggle-bar-middle {
+  left: 0px; /* Resetowanie przesunięcia */
+}
+
+.menu-toggle:hover .menu-toggle-bar-middleOpen {
+  right: 0px; /* Resetowanie przesunięcia */
+}
+
+/* Responsywność dla ekranów poniżej 1400px */
+@media (max-width: 1400px) {
+  .menu-item {
+    margin-left: 5px; /* Zmniejszenie odstępów między elementami menu */
+  }
+}
+
+/* Responsywność dla ekranów poniżej 1020px */
+@media (max-width: 1020px) {
+  .menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 77px;
+    background-color: #151c28; /* Ustawienie tła dla menu mobilnego */
+  }
+
+  .menu {
+    position: fixed; /* Menu mobilne jest pozycjonowane fixed */
+    top: 0;
+    right: 0;
+    width: 250px; /* Szerokość menu mobilnego */
+    height: 100%; /* Wysokość na 100% ekranu */
+    background-color: #151c28; /* Kolor tła menu mobilnego */
+    flex-direction: column; /* Układ pionowy dla menu mobilnego */
+    justify-content: flex-start; /* Wyrównanie elementów do góry */
+    padding-top: 77px; /* Padding górny, aby uniknąć nakładania na pasek menu */
+    transform: translateX(100%); /* Ukrycie menu poza ekranem */
+  }
+
+  .menu-inner {
+    position: relative;
+    max-width: 1450px;
+    width: 95%; /* Zmniejszenie szerokości kontenera w menu mobilnym */
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+
+  .menu.open {
+    transform: translateX(0); /* Pokazanie menu mobilnego */
+  }
+
+  .menu-item {
+    margin: 10px 0; /* Marginesy między elementami menu mobilnego */
+    width: 80%; /* Szerokość elementów menu mobilnego */
+    padding-left: 20%; /* Padding lewy dla wyrównania tekstu */
+  }
+
+  .menu-link {
+    text-align: left; /* Wyrównanie tekstu do lewej w menu mobilnym */
+  }
+
+  /* Pokazanie przycisku menu w widoku mobilnym */
+  .menu-toggle {
+    display: flex; /* Wyświetlenie przycisku menu */
+  }
+}
+
+/* Responsywność dla ekranów poniżej 650px */
+@media (max-width: 650px) {
+  .menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%; /* Menu na całej szerokości ekranu */
+    height: 100%;
+    background-color: #151c28;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 77px;
+    transform: translateX(100%);
+    z-index: 2; /* Wyższy z-index dla menu */
+  }
+
+  .menu-inner {
+    position: relative;
+    max-width: 1450px;
+    width: 100%; /* Szerokość na 100% */
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+
+  .menu.open {
+    transform: translateX(0); /* Pokazanie menu */
+  }
+
+  .menu-item {
+    margin: 10px 0; /* Marginesy między elementami menu */
+    width: 50%; /* Szerokość elementów menu */
+    padding-left: 20%; /* Padding lewy dla wyrównania tekstu */
+  }
+
+  /* Pokazanie przycisku menu w widoku mobilnym */
+  .menu-toggle {
+    display: flex;
+    margin-right: 50px; /* Margines prawy dla lepszego rozmieszczenia */
+  }
+}
