@@ -45,10 +45,8 @@ export const Menu = ({ items }) => {
 
   return (
     <div className={`menu-container ${isScrolled ? "scrolled" : ""}`}>
-      {" "}
       {/* Dodanie klasy 'scrolled' gdy strona jest przewinięta */}
       <div className="menu-inner">
-        {" "}
         {/* Wewnętrzny kontener ograniczający szerokość zawartości */}
         {/* Logo firmy jako link do sekcji 'sliderBox' */}
         <a href="#sliderBox">
@@ -56,11 +54,9 @@ export const Menu = ({ items }) => {
         </a>
         {/* Lista elementów menu */}
         <ul className={`menu ${isMenuOpen ? "open" : ""}`}>
-          {" "}
           {/* Dodanie klasy 'open' gdy menu jest otwarte */}
           {items.map((item, index) => (
             <li key={index} className="menu-item">
-              {" "}
               {/* Każdy element listy reprezentuje jeden link w menu */}
               <a
                 href={`#${item.toLowerCase()}`} // Link do odpowiedniej sekcji strony
