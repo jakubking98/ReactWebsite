@@ -31,11 +31,11 @@
 .threeElementbox .element2 p,
 .threeElementbox .element3 p {
   padding: 0; /* Brak paddingu */
-  margin: -145px 0 0 -95px; /* Ustawia margines dla numerów usług */
+  margin: -145px 0 0 -85px; /* Ustawia margines dla numerów usług */
   font-size: 140px; /* Rozmiar czcionki numerów */
   font-weight: 700; /* Pogrubienie czcionki */
   color: #cfd6e3; /* Kolor czcionki numerów */
-  clip-path: inset(0 0 0 45px); /* Użycie clip-path dla efektu wizualnego */
+  clip-path: inset(0 0 0 35px); /* Użycie clip-path dla efektu wizualnego */
   vertical-align: baseline;
 
 }
