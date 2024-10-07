@@ -36,6 +36,8 @@
   font-weight: 700; /* Pogrubienie czcionki */
   color: #cfd6e3; /* Kolor czcionki numerów */
   clip-path: inset(0 0 0 45px); /* Użycie clip-path dla efektu wizualnego */
+  vertical-align: baseline;
+
 }
 
 .threeElementbox .element1 h3,
