@@ -3,7 +3,7 @@ Polski:
 ReactWebsite 
 
 Opis Projektu:
-Jest to strona internetowa zbudowana w technologii React, składająca się z wielu dynamicznych komponentów, które tworzą interaktywne i responsywne doświadczenie użytkownika. Projekt zawiera różnorodne sekcje, takie jak portfolio, blog, formularz kontaktowy oraz suwak z efektami paralaksy. Kod jest modularny i zoptymalizowany pod kątem wydajności i elastyczności.
+Jest to strona internetowa zbudowana w technologii React, składająca się z wielu dynamicznych komponentów, które tworzą interaktywne i responsywne doświadczenie użytkownika. Projekt zawiera różnorodne sekcje, takie jak portfolio, blog, formularz kontaktowy oraz slider z efektami paralaksy. Kod jest modularny i zoptymalizowany pod kątem wydajności i elastyczności.
 
 Główne technologie i metody:
 React Hooks: Projekt wykorzystuje hooki takie jak useState, useEffect oraz useRef do zarządzania stanem, śledzenia efektów oraz manipulacji DOM.
