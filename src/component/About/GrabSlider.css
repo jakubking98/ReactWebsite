@@ -21,10 +21,10 @@
   font-size: 140px; /* Rozmiar czcionki */
   font-weight: 700; /* Grubość czcionki */
   line-height: 100%; /* Wysokość linii */
-  margin: -80px 20px 0 -45px; /* Marginesy */
+  margin: -80px 20px 0 -35px; /* Marginesy */
   display: inline-block; /* Wyświetlanie jako blok liniowy */
   color: #cfd6e3; /* Kolor tekstu */
-  clip-path: inset(0 0 0 45px); /* Przycięcie tekstu */
+  clip-path: inset(0 0 0 35px); /* Przycięcie tekstu */
 }
 
 /* Stylowanie małego tekstu */
