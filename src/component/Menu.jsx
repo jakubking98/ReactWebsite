@@ -2,18 +2,6 @@ import "./menu.css"; // Importowanie stylów specyficznych dla komponentu Menu
 import { useEffect, useState } from "react"; // Importowanie hooków useEffect i useState z React
 import logo from "../assets/logo.png"; // Importowanie logo
 
-// Tablica elementów menu
-export const menuItems = [
-  "Services",
-  "About",
-  "Portfolio",
-  "Pricing",
-  "Testimonial",
-  "Blog",
-  "Skills",
-  "Timeline",
-  "Contact",
-];
 
 // Komponent Menu odpowiedzialny za wyświetlanie paska nawigacyjnego
 export const Menu = ({ items }) => {
